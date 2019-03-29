@@ -45,7 +45,7 @@ namespace Fractals {
             b = B;
             c = C;
             points = new Vector3[3];
-            points[0] = A;points[1] = B; points[3] = C;
+            points[0] = A;points[1] = B; points[2] = C;
         }
 
         public Triangle SubTriangleA() {

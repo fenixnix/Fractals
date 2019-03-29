@@ -44,12 +44,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2518563451284337121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ef36774dd3502045be61ce1c86c84ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d9a565d57d5d5a40bd7c2d9e29f4a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  n: 2
+  n: 3
   cube: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  defaultMaterial: {fileID: 2100000, guid: 35c064ca0ea0cfb488f7843fd21e290c, type: 2}
+  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   draw: 1
   solid: 0
 --- !u!114 &6388377499230091737
@@ -61,14 +61,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2518563451284337121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dee8e49f344e094b837053d30cd8cbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5865e1be18485fd4a929dbe1f5c36a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   n: 9
-  turnList:
-  - 75
-  - -150
-  - 75
+  turnList: []
   Amplify: 0.2
   draw: 1
   trigger: 0
@@ -81,7 +78,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2518563451284337121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196ec2016bcd04b41b48de8ba26ddf63, type: 3}
+  m_Script: {fileID: 11500000, guid: e552eff6c9b5302469b9be4b61d6cd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   n: 5
@@ -112,7 +109,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35c064ca0ea0cfb488f7843fd21e290c, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
