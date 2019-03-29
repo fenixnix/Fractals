@@ -12,14 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aafa1fb2d5dc5743a5442fa2ff1b680, type: 3}
   m_Name: SingleBarchPlant
   m_EditorClassIdentifier: 
-  symbels: 670064005b005d00
+  symbels: 
   begin: g
   rules:
   - src: 103
     dst: d[g]g
-  - src: 100
-    dst: d
-  - src: 91
-    dst: '['
-  - src: 93
-    dst: ']'

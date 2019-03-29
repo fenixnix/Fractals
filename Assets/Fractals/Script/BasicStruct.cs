@@ -7,6 +7,10 @@ using UnityEngine;
 
 namespace Fractals {
     public class Line {
+        public Line(Line ori) {
+            a = ori.a;
+            b = ori.b;
+        }
         public Line(Vector3 a, Vector3 b) {
             this.a = a; this.b = b;
         }
@@ -14,6 +18,18 @@ namespace Fractals {
         public Vector3 b;
         public Vector3 MidPoint => (a + b) / 2;
         public float Length => (a - b).magnitude;
+
+        public void StepForward() {
+            a += b;
+        }
+
+        public void Rotate(Vector3 Eular) {
+            b = RotateVector(b, Eular);
+        }
+
+        static Vector3 RotateVector(Vector3 src, Vector3 Eular) {
+            return Matrix4x4.Rotate(Quaternion.Euler(Eular)).MultiplyPoint3x4(src);
+        }
     }
 
     public class GeoObj {

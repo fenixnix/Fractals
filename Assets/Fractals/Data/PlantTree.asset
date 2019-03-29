@@ -9,25 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c2cb5689a2aae47a2d493fa8291db3, type: 3}
+  m_Script: {fileID: 11500000, guid: e5ab0226361827b4fbed5ac4ceea7cf8, type: 3}
   m_Name: PlantTree
   m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript1
-  code:
-  - probability: 0
-    mtx: {x: 0.05, y: 0.6, z: 0, w: 0}
-    translate: {x: 0, y: 0, z: 0}
-  - probability: 0
-    mtx: {x: 0.05, y: -0.5, z: 0, w: 0}
-    translate: {x: 0, y: 0, z: 0}
-  - probability: 0
-    mtx: {x: 0.6, y: 0.5, z: 40, w: 40}
-    translate: {x: 0, y: 0, z: 0}
-  - probability: 0
-    mtx: {x: 0.5, y: 0.45, z: 20, w: 20}
-    translate: {x: 0, y: 0, z: 0}
-  - probability: 0
-    mtx: {x: 0.5, y: 0.55, z: -30, w: -30}
-    translate: {x: 0, y: 0, z: 0}
-  - probability: 0
-    mtx: {x: 0.55, y: 0.4, z: -40, w: -40}
-    translate: {x: 0, y: 0, z: 0}
+  code: []

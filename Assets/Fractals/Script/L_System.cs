@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 namespace Fractals {
-    public class Lindenmayer : MonoBehaviour {
+    public class L_System : MonoBehaviour {
         public ChainLang chainLang;
         public string current;
 

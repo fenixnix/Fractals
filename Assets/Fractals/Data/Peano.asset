@@ -19,9 +19,3 @@ MonoBehaviour:
     dst: -YF+XFX+FY-
   - src: 89
     dst: +XF-YFY-FX+
-  - src: 43
-    dst: +
-  - src: 45
-    dst: '-'
-  - src: 70
-    dst: F

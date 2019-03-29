@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ab0226361827b4fbed5ac4ceea7cf8, type: 3}
-  m_Name: FernLeaf
-  m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript1
-  code: []
+  m_Script: {fileID: 11500000, guid: 1aafa1fb2d5dc5743a5442fa2ff1b680, type: 3}
+  m_Name: PeanoHilbert
+  m_EditorClassIdentifier: 
+  symbels: 
+  begin: F
+  rules:
+  - src: 70
+    dst: F+F-F-FF+F+F-F
