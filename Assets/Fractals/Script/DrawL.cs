@@ -4,34 +4,42 @@ using UnityEngine;
 
 public class DrawL : MonoBehaviour {
     L_System L;
+    LineRenderer lineRender;
+    public Vector3 startVector = Vector3.up;
     public Vector3 RotateAngle = new Vector3(0,0,60);
     private void Start() {
         L = GetComponent<L_System>();
+        lineRender = GetComponent<LineRenderer>();
     }
 
-    Stack<Line> points = new Stack<Line>();
-    public void DrawVonKochOrPeano(string LChain) {
+    Stack<Line> lines = new Stack<Line>();
+    List<Vector3> points = new List<Vector3>();
+    public void DrawL_System(string LChain) {
+        lines.Clear();
         points.Clear();
-        Line line = new Line(new Vector3(0, 0, 0), new Vector3(1, 0, 0));
+        Line line = new Line(Vector3.zero, startVector);
+        //points.Add(Vector3.zero);
         foreach(var c in LChain) {
             switch(c) {
-                case 'F':Debug.DrawLine(line.a, line.a + line.b);
+                case 'F':
+                    points.Add(line.a);
+                    points.Add(line.a + line.b);
+                    //Debug.DrawLine(line.a, line.a + line.b);
                     line.StepForward(); break;
                 case '+': line.Rotate(RotateAngle); break;
                 case '-': line.Rotate(-RotateAngle); break;
-                case '[': points.Push(new Line(line)); break;
-                case ']': line = points.Pop(); break;
+                case '[': lines.Push(new Line(line)); break;
+                case ']': line = lines.Pop(); break;
             }
         }
+        lineRender.positionCount = points.Count;
+        lineRender.SetPositions(points.ToArray());
     }
 
     [ContextMenu("Draw")]
     public void Draw() {
+        L.Step();
         string chain = L.current;
-        DrawVonKochOrPeano(chain);
-    }
-
-    private void Update() {
-        Draw();
+        DrawL_System(chain);
     }
 }
