@@ -1222,7 +1222,7 @@ PrefabInstance:
         type: 3}
       propertyPath: chainLang
       value: 
-      objectReference: {fileID: 11400000, guid: b649bfb518c7b2f4b9d9f22613dfcdfb,
+      objectReference: {fileID: 11400000, guid: d0f87c33c56e5124b97cbd1a4b879183,
         type: 2}
     - target: {fileID: 7733822521838974711, guid: ca191142ce75e5d4c86ca598558a5827,
         type: 3}
@@ -1853,6 +1853,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0.107467055
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733822521838974711, guid: ca191142ce75e5d4c86ca598558a5827,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485131064658560919, guid: ca191142ce75e5d4c86ca598558a5827,
+        type: 3}
+      propertyPath: RotateAngle.z
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca191142ce75e5d4c86ca598558a5827, type: 3}
