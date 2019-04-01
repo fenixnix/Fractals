@@ -91,7 +91,7 @@ namespace Fractals {
             if(n == 0) return;
             var endPoint = startPoint + vector;
             var line = new Line(startPoint, endPoint);
-            //lines.Add(line);
+            lines.Add(line);
             var points = new List<Vector3>();
             SubDivid(n, points, line,line.Length*.2f);
             pointList.Add(points);
@@ -132,8 +132,11 @@ namespace Fractals {
             foreach(var points in pointList) {
                 Vector3 prePoint = points[0];
                 foreach(var p in points) {
-                    Gizmos.color = new Color(Random.Range(0.0f, 1f),
-                        Random.Range(0.0f, 1f), Random.Range(0f, 1f));
+
+                    //Gizmos.color = Random.ColorHSV();
+                    //= new Color(Random.Range(0.0f, 1f),
+                    //Random.Range(0.0f, 1f), Random.Range(0f, 1f));
+
                     Gizmos.DrawLine(prePoint, p);
                     prePoint = p;
                 }
