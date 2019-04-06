@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fractals;
+using Grid;
+using UnityEngine.UI;
 
 public class DrawDLA : MonoBehaviour
 {
     public DLA dla = new DLA();
+    public Text text;
     bool Ready = false;
 
     public int CubeSize = 3;
@@ -18,6 +21,24 @@ public class DrawDLA : MonoBehaviour
     [ContextMenu("Step")]
     public void Step() {
         dla.Step();
+    }
+
+    public Grid2D grid2D;
+    public DLA2D dla2;
+    [ContextMenu("Init2D")]
+    public void Init2D() {
+        grid2D = Grid2D.Create(50, 50);
+        dla2 = new DLA2D();
+        dla2.SetSeedPoint(grid2D, grid2D.Center);
+        text.text = grid2D.Print();
+    }
+
+    [ContextMenu("Step2D")]
+    public void Step2D() {
+        for(int i = 0; i < 25*6; i++) {
+            dla2.Step(grid2D);
+        }
+        text.text = grid2D.Inverse().Print();
     }
 
     private void OnDrawGizmos() {
