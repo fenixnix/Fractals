@@ -7,14 +7,14 @@ namespace Grid {
 
         public enum CorridorType {Ortho,Diago,Both}
 
-        public byte[,] grid;
+        public int[,] grid;
 
         public int Width => grid.GetLength(1);
         public int Height => grid.GetLength(0);
 
         public Vector2Int Center => new Vector2Int(Width / 2, Height / 2);
 
-        public byte this[int x, int y] {
+        public int this[int x, int y] {
             get {
                 if(Inside(x, y)) {
                     return grid[y, x];
@@ -30,7 +30,7 @@ namespace Grid {
             }
         }
 
-        public byte this[Vector2Int vec] {
+        public int this[Vector2Int vec] {
             get {
                 return this[vec.x, vec.y];
             }
@@ -61,6 +61,18 @@ namespace Grid {
             return false;
         }
 
+        public int CountRect(Vector2Int point, int size, int value) {
+            int cnt = 0;
+            for(int row = -size; row < size + 1; row++) {
+                for(int col = -size; col < size + 1; col++) {
+                    if((this[point.x + col, point.y + row]) == value) {
+                        cnt++;
+                    }
+                }
+            }
+            return cnt;
+        }
+
         public Grid2D Inverse() {
             var tmp = Create(Width, Height);
             for(int y = 0; y < Height; y++) {
@@ -88,8 +100,8 @@ namespace Grid {
             return txt;
         }
 
-        static public Grid2D Create(int w, int h, byte def = 0) {
-            var tmp = new byte[h, w];
+        static public Grid2D Create(int w, int h, int def = 0) {
+            var tmp = new int[h, w];
             for(int y = 0; y < h; y++) {
                 for(int x = 0; x < w; x++) {
                     tmp[y, x] = def;

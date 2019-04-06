@@ -4,15 +4,15 @@ using Grid;
 
 namespace Fractals{
     public class DLA2D {
-        public void SetSeedPoint(Grid2D grid,Vector2Int seed, Grid2DWalker.WalkType type = Grid2DWalker.WalkType.Direction4) {
+        public void SetSeedPoint(Grid2D grid,Vector2Int seed, Walker2D.WalkType type = Walker2D.WalkType.Direction4) {
             Grid2DPainter.DrawDiamond(grid, seed.x, seed.y, 2);
-            Grid2DWalker.InitMovTab(type);
+            Walker2D.InitMovTab(type);
         }
 
         public void Step(Grid2D grid,Grid2D.CorridorType type = Grid2D.CorridorType.Ortho) {
             //var walkerPos = OutLineGenerate(grid);
             var walkerPos = RandomGenerate(grid);
-            Grid2DWalker walker = new Grid2DWalker(walkerPos);
+            Walker2D walker = new Walker2D(walkerPos);
             Vector2Int curPos = Vector2Int.zero;
             do {
                 curPos = walker.Step(grid);
