@@ -5,7 +5,7 @@ using Grid;
 namespace Fractals{
     public class DLA2D {
         public void SetSeedPoint(Grid2D grid,Vector2Int seed, Walker2D.WalkType type = Walker2D.WalkType.Direction4) {
-            Grid2DPainter.DrawDiamond(grid, seed.x, seed.y, 2);
+            Grid2DPaint.Diamond(grid, seed.x, seed.y, 2);
             Walker2D.InitMovTab(type);
         }
 
@@ -17,7 +17,7 @@ namespace Fractals{
             do {
                 curPos = walker.Step(grid);
             } while(!grid.NextTo(curPos,type));
-            Grid2DPainter.DrawDiamond(grid, curPos.x, curPos.y, 2);
+            Grid2DPaint.Diamond(grid, curPos.x, curPos.y, 2);
             //grid[curPos.x,curPos.y] = 255;
         }
 

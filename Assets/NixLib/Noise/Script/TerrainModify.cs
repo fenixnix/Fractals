@@ -10,8 +10,8 @@ public class TerrainModify : MonoBehaviour
     public AnimationCurve curve;
     public Region region = new Region();
     
-    [ContextMenu("Test")]
-    public void Test() {
+    [ContextMenu("Generate")]
+    public void Generate() {
         noise.Draw();
         SetPerlinHeight();
         SetLayer();

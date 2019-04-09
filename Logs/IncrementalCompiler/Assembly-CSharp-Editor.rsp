@@ -337,4 +337,5 @@
 -d:CSHARP_7_OR_LATER
 -d:CSHARP_7_3_OR_NEWER
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/Editor/NoiseInspector.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/Editor/TerrainGenerateInspector.cs
 -v:0

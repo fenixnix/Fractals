@@ -29,11 +29,19 @@ public class DrawDLA : MonoBehaviour
     public FillFlow fillFlow = new FillFlow();
     public GridCountMap cntMap = new GridCountMap();
     public DLA2D dla2;
+
+    public Vector2Int SrcPoint;
+    public Vector2Int DstPoint;
+    public int LineWidth = 0;
+
     [ContextMenu("Init2D")]
     public void Init2D() {
         grid2D = Grid2D.Create(GridSize, GridSize);
         dla2 = new DLA2D();
         dla2.SetSeedPoint(grid2D, grid2D.Center);
+
+        //Grid2DPaint.Line(grid2D, SrcPoint,DstPoint,LineWidth);
+
         text.text = grid2D.Print();
         render.Draw(grid2D);
     }
