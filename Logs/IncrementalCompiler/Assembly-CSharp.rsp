@@ -369,7 +369,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/FractalsNoise.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseAtom.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseGUI.cs
--i:D:/UnityProject/Fractals/Assets/NixLib/TextureRender.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Noise/TextureRender.cs
 -i:D:/UnityProject/Fractals/Assets/RotationSpeed.cs
 -i:D:/UnityProject/Fractals/Assets/Rotator.cs
 -v:0

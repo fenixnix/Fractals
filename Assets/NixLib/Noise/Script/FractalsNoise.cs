@@ -3,8 +3,14 @@
 namespace Noise {
     public class FractalsNoise {
         public float[,] rawData;
+
+        public int Width => rawData.GetLength(1);
+        public int Height => rawData.GetLength(0);
+        public float this[int x, int y] =>rawData[y,x];
+
         float max = float.MinValue;
         float min = float.MaxValue;
+        
 
         public void Generate(Vector2Int size, float scale, int octave, float persistance, float lacunarity, Vector2 offset) {
             rawData = new float[size.y, size.x];
