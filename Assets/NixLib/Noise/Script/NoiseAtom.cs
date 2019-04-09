@@ -8,6 +8,8 @@ namespace Noise{
         float[] ampArray;
         float[] freqArray;
         Vector2[] offsets;
+        float max;
+        float min;
 
         public void Init(int octave, float persistance, float lacunarity,int seed =0) {
             this.octave = octave;
@@ -17,20 +19,25 @@ namespace Noise{
             ampArray = new float[octave];
             freqArray = new float[octave];
             offsets = new Vector2[octave];
+            max = 0;
             for(int i = 0; i < octave; i++) {
                 ampArray[i] = Mathf.Pow(persistance, i);
                 freqArray[i] = Mathf.Pow(lacunarity, i);
                 offsets[i] = Random.insideUnitCircle;
+                max += ampArray[i];
             }
+            max *= .5f;
+            min = -max;
         }
 
         public float NoiseValue(float x, float y) {
             float value = 0;
             for(int i = 0; i < octave; i++) {
-                value += (Mathf.PerlinNoise((x+offsets[i].x) * freqArray[i],
-                    (y + offsets[i].y) * freqArray[i]) * 2 - 1) * ampArray[i];
+                float noise = Mathf.PerlinNoise((x + offsets[i].x) * freqArray[i],
+                    (y + offsets[i].y) * freqArray[i]);
+                value += (noise - .5f) * ampArray[i];
             }
-            return value;
+            return  Mathf.InverseLerp(min,max,value);
         }
     }
 }
