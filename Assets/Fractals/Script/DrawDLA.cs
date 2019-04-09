@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DrawDLA : MonoBehaviour
 {
-    public Grid2DTextureRender render;
+    public TextureRender render;
     public DLA dla = new DLA();
     public Text text;
     bool Ready = false;
