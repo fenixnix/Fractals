@@ -348,7 +348,6 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/Grid2D.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/Grid2DPainter.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/GridCountMap.cs
--i:D:/UnityProject/Fractals/Assets/NixLib/Grid/TextureRender.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/Walker2D.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Map/CellularAutomata/CA_ClassicRules.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Map/CellularAutomata/CA_Rule.cs
@@ -370,6 +369,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/FractalsNoise.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseAtom.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseGUI.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/TextureRender.cs
 -i:D:/UnityProject/Fractals/Assets/RotationSpeed.cs
 -i:D:/UnityProject/Fractals/Assets/Rotator.cs
 -v:0

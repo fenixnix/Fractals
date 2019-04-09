@@ -1,168 +1,118 @@
- (0,0): [04/09/2019 03:21:13.227 上午] Unity incremental compiler server
- (0,0): [04/09/2019 03:21:13.417 上午] watchdog active on pid: 6436
- (0,0): [04/09/2019 03:21:22.838 上午] Unity.Mathematics.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:22.859 上午] Unity.Mathematics.dll compiling...
- (0,0): [04/09/2019 03:21:23.398 上午] Unity.Burst.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:23.425 上午] Unity.Burst.dll compiling...
- (0,0): [04/09/2019 03:21:23.534 上午] Unity.Analytics.DataPrivacy.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:23.549 上午] Unity.Analytics.DataPrivacy.dll compiling...
- (0,0): [04/09/2019 03:21:23.703 上午] Unity.Properties.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:23.718 上午] Unity.Properties.dll compiling...
- (0,0): [04/09/2019 03:21:23.930 上午] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:23.944 上午] Unity.PackageManagerUI.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:24.104 上午] Unity.CollabProxy.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:24.117 上午] Unity.CollabProxy.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:27.397 上午] Unity.Analytics.DataPrivacy.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Analytics.DataPrivacy.dll
- (0,0): [04/09/2019 03:21:27.398 上午] Unity.PackageManagerUI.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.PackageManagerUI.Editor.dll
- (0,0): [04/09/2019 03:21:27.399 上午] Unity.Properties.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.dll
- (0,0): [04/09/2019 03:21:27.428 上午] Unity.Analytics.DataPrivacy.dll compilation finished in 3880ms  source files re-parsed: 3 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:27.397 上午] Unity.Burst.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Burst.dll
- (0,0): [04/09/2019 03:21:27.441 上午] Unity.Analytics.DataPrivacy.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:27.397 上午] Unity.CollabProxy.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.CollabProxy.Editor.dll
- (0,0): [04/09/2019 03:21:27.475 上午] Unity.Properties.dll compilation finished in 3757ms  source files re-parsed: 34 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:27.476 上午] Unity.Burst.dll compilation finished in 4050ms  source files re-parsed: 3 metadata reloaded: 27
- (0,0): [04/09/2019 03:21:27.478 上午] Unity.CollabProxy.Editor.dll compilation finished in 3360ms  source files re-parsed: 17 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:27.497 上午] Unity.Properties.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:27.498 上午] Unity.Burst.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:27.476 上午] Unity.PackageManagerUI.Editor.dll compilation finished in 3532ms  source files re-parsed: 52 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:27.512 上午] Unity.CollabProxy.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:27.534 上午] Unity.PackageManagerUI.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:28.441 上午] Unity.Mathematics.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Mathematics.dll
- (0,0): [04/09/2019 03:21:28.468 上午] Unity.Mathematics.dll compilation finished in 5608ms  source files re-parsed: 82 metadata reloaded: 208
- (0,0): [04/09/2019 03:21:28.481 上午] Unity.Mathematics.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:28.880 上午] Unity.Properties.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:28.896 上午] Unity.Properties.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:29.202 上午] Unity.Properties.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.Editor.dll
- (0,0): [04/09/2019 03:21:29.223 上午] Unity.Properties.Editor.dll compilation finished in 328ms  source files re-parsed: 23 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:29.237 上午] Unity.Properties.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.249 上午] Unity.Burst.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.263 上午] Unity.Burst.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:29.452 上午] Unity.Properties.Codegen.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.471 上午] Unity.Properties.Codegen.dll compiling...
- (0,0): [04/09/2019 03:21:29.498 上午] Unity.Burst.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Burst.Editor.dll
- (0,0): [04/09/2019 03:21:29.520 上午] Unity.Burst.Editor.dll compilation finished in 257ms  source files re-parsed: 10 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:29.534 上午] Unity.Burst.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.649 上午] Unity.Properties.Codegen.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.Codegen.dll
- (0,0): [04/09/2019 03:21:29.670 上午] Unity.Properties.Codegen.dll compilation finished in 200ms  source files re-parsed: 7 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:29.686 上午] Unity.Properties.Codegen.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.858 上午] Unity.Collections.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:29.874 上午] Unity.Collections.dll compiling...
- (0,0): [04/09/2019 03:21:30.093 上午] Unity.Collections.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Collections.dll
- (0,0): [04/09/2019 03:21:30.113 上午] Unity.Collections.dll compilation finished in 239ms  source files re-parsed: 12 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:30.125 上午] Unity.Collections.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:30.157 上午] Unity.Mathematics.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:30.170 上午] Unity.Mathematics.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:30.326 上午] Unity.Mathematics.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Mathematics.Editor.dll
- (0,0): [04/09/2019 03:21:30.349 上午] Unity.Mathematics.Editor.dll compilation finished in 179ms  source files re-parsed: 4 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:30.362 上午] Unity.Mathematics.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:31.014 上午] Unity.Entities.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:31.034 上午] Unity.Entities.dll compiling...
- (0,0): [04/09/2019 03:21:31.651 上午] Unity.Jobs.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:31.702 上午] Unity.Jobs.dll compiling...
- (0,0): [04/09/2019 03:21:31.707 上午] Unity.Entities.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.dll
- (0,0): [04/09/2019 03:21:31.743 上午] Unity.Entities.dll compilation finished in 708ms  source files re-parsed: 58 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:31.756 上午] Unity.Entities.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:31.820 上午] Unity.Jobs.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Jobs.dll
- (0,0): [04/09/2019 03:21:31.840 上午] Unity.Jobs.dll compilation finished in 137ms  source files re-parsed: 3 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:31.852 上午] Unity.Jobs.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:32.546 上午] Unity.Entities.Hybrid.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:32.557 上午] Unity.Entities.Hybrid.dll compiling...
- (0,0): [04/09/2019 03:21:32.769 上午] Unity.Entities.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Hybrid.dll
- (0,0): [04/09/2019 03:21:32.792 上午] Unity.Entities.Hybrid.dll compilation finished in 236ms  source files re-parsed: 12 metadata reloaded: 2
- (0,0): [04/09/2019 03:21:32.806 上午] Unity.Entities.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:32.856 上午] Unity.Jobs.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:32.868 上午] Unity.Jobs.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:32.998 上午] Unity.Jobs.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Jobs.Editor.dll
- (0,0): [04/09/2019 03:21:33.022 上午] Unity.Jobs.Editor.dll compilation finished in 154ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:33.038 上午] Unity.Jobs.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:33.953 上午] Unity.Transforms.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:33.969 上午] Unity.Transforms.dll compiling...
- (0,0): [04/09/2019 03:21:34.235 上午] Unity.Transforms.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.dll
- (0,0): [04/09/2019 03:21:34.258 上午] Unity.Transforms.dll compilation finished in 290ms  source files re-parsed: 9 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:34.288 上午] Unity.Transforms.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.253 上午] Unity.Rendering.Hybrid.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.268 上午] Unity.Rendering.Hybrid.dll compiling...
- (0,0): [04/09/2019 03:21:35.450 上午] Unity.Rendering.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Rendering.Hybrid.dll
- (0,0): [04/09/2019 03:21:35.461 上午] Unity.Entities.Properties.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.474 上午] Unity.Rendering.Hybrid.dll compilation finished in 206ms  source files re-parsed: 9 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:35.475 上午] Unity.Entities.Properties.dll compiling...
- (0,0): [04/09/2019 03:21:35.488 上午] Unity.Rendering.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.662 上午] Unity.Entities.Properties.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Properties.dll
- (0,0): [04/09/2019 03:21:35.684 上午] Unity.Entities.Properties.dll compilation finished in 209ms  source files re-parsed: 14 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:35.698 上午] Unity.Entities.Properties.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.779 上午] Unity.Transforms.Hybrid.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:35.792 上午] Unity.Transforms.Hybrid.dll compiling...
- (0,0): [04/09/2019 03:21:35.899 上午] Unity.Transforms.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.Hybrid.dll
- (0,0): [04/09/2019 03:21:35.935 上午] Unity.Transforms.Hybrid.dll compilation finished in 142ms  source files re-parsed: 6 metadata reloaded: 0
- (0,0): [04/09/2019 03:21:35.948 上午] Unity.Transforms.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:37.391 上午] Unity.Entities.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:37.403 上午] Unity.Entities.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:37.590 上午] Unity.Entities.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Editor.dll
- (0,0): [04/09/2019 03:21:37.613 上午] Unity.Entities.Editor.dll compilation finished in 210ms  source files re-parsed: 26 metadata reloaded: 1
- (0,0): [04/09/2019 03:21:37.624 上午] Unity.Entities.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:44.785 上午] Unity.Transforms.Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:44.798 上午] Unity.Transforms.Editor.dll compiling...
- (0,0): [04/09/2019 03:21:44.961 上午] Unity.Transforms.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.Editor.dll
- (0,0): [04/09/2019 03:21:44.984 上午] Unity.Transforms.Editor.dll compilation finished in 186ms  source files re-parsed: 1 metadata reloaded: 2
- (0,0): [04/09/2019 03:21:44.997 上午] Unity.Transforms.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:21:55.871 上午] Assembly-CSharp.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:21:55.887 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:21:56.007 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:21:56.025 上午] Assembly-CSharp.dll compilation finished in 139ms  source files re-parsed: 56 metadata reloaded: 10
- (0,0): [04/09/2019 03:21:56.042 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:22:01.629 上午] Assembly-CSharp.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:22:01.644 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:22:01.762 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:22:01.775 上午] Assembly-CSharp.dll compilation finished in 131ms  source files re-parsed: 56 metadata reloaded: 0
- (0,0): [04/09/2019 03:22:01.788 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:22:56.620 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:22:56.786 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:22:56.802 上午] Assembly-CSharp.dll compilation finished in 182ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:22:56.814 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:22:56.826 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:22:57.788 上午] Assembly-CSharp-Editor.dll: no prior compilation found in cache. Caller PID: 6436
- (0,0): [04/09/2019 03:22:57.798 上午] Assembly-CSharp-Editor.dll compiling...
- (0,0): [04/09/2019 03:22:57.868 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
- (0,0): [04/09/2019 03:22:57.885 上午] Assembly-CSharp-Editor.dll compilation finished in 86ms  source files re-parsed: 1 metadata reloaded: 1
- (0,0): [04/09/2019 03:22:57.895 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:26:17.815 上午] Compiler cache size is now 18.34 MB
- (0,0): [04/09/2019 03:26:40.933 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:26:41.095 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:26:41.113 上午] Assembly-CSharp.dll compilation finished in 178ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:26:41.124 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:26:41.134 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:26:42.101 上午] Assembly-CSharp-Editor.dll compiling...
- (0,0): [04/09/2019 03:26:42.200 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
- (0,0): [04/09/2019 03:26:42.216 上午] Assembly-CSharp-Editor.dll compilation finished in 115ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [04/09/2019 03:26:42.228 上午] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:26:42.239 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:28:30.473 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:28:30.716 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:28:30.738 上午] Assembly-CSharp.dll compilation finished in 265ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:28:30.749 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:28:30.760 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:28:35.348 上午] Assembly-CSharp-Editor.dll compiling...
- (0,0): [04/09/2019 03:28:35.418 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
- (0,0): [04/09/2019 03:28:35.433 上午] Assembly-CSharp-Editor.dll compilation finished in 85ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [04/09/2019 03:28:35.445 上午] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:28:35.456 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:30:03.225 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:30:03.342 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:30:03.359 上午] Assembly-CSharp.dll compilation finished in 133ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:30:03.371 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:30:03.382 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:30:04.298 上午] Assembly-CSharp-Editor.dll compiling...
- (0,0): [04/09/2019 03:30:04.377 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
- (0,0): [04/09/2019 03:30:04.394 上午] Assembly-CSharp-Editor.dll compilation finished in 96ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [04/09/2019 03:30:04.405 上午] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:30:04.416 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:30:38.702 上午] Assembly-CSharp.dll compiling...
- (0,0): [04/09/2019 03:30:38.838 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
- (0,0): [04/09/2019 03:30:38.857 上午] Assembly-CSharp.dll compilation finished in 154ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [04/09/2019 03:30:38.867 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:30:38.878 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
- (0,0): [04/09/2019 03:30:39.811 上午] Assembly-CSharp-Editor.dll compiling...
- (0,0): [04/09/2019 03:30:39.895 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
- (0,0): [04/09/2019 03:30:39.916 上午] Assembly-CSharp-Editor.dll compilation finished in 104ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [04/09/2019 03:30:39.927 上午] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed. Caller PID: 6436
- (0,0): [04/09/2019 03:30:39.938 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 6436
+ (0,0): [04/09/2019 05:20:13.008 上午] Unity incremental compiler server
+ (0,0): [04/09/2019 05:20:13.141 上午] watchdog active on pid: 10444
+ (0,0): [04/09/2019 05:21:04.829 上午] Unity.Mathematics.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:04.842 上午] Unity.Mathematics.dll compiling...
+ (0,0): [04/09/2019 05:21:05.178 上午] Unity.Burst.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:05.194 上午] Unity.Burst.dll compiling...
+ (0,0): [04/09/2019 05:21:05.231 上午] Unity.Analytics.DataPrivacy.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:05.243 上午] Unity.Analytics.DataPrivacy.dll compiling...
+ (0,0): [04/09/2019 05:21:05.334 上午] Unity.Properties.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:05.346 上午] Unity.Properties.dll compiling...
+ (0,0): [04/09/2019 05:21:05.472 上午] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:05.484 上午] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:05.604 上午] Unity.CollabProxy.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:05.616 上午] Unity.CollabProxy.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:07.893 上午] Unity.Burst.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Burst.dll
+ (0,0): [04/09/2019 05:21:07.894 上午] Unity.PackageManagerUI.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.PackageManagerUI.Editor.dll
+ (0,0): [04/09/2019 05:21:07.894 上午] Unity.Properties.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.dll
+ (0,0): [04/09/2019 05:21:07.894 上午] Unity.Analytics.DataPrivacy.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Analytics.DataPrivacy.dll
+ (0,0): [04/09/2019 05:21:07.923 上午] Unity.Analytics.DataPrivacy.dll compilation finished in 2680ms  source files re-parsed: 3 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:07.893 上午] Unity.CollabProxy.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.CollabProxy.Editor.dll
+ (0,0): [04/09/2019 05:21:07.934 上午] Unity.Analytics.DataPrivacy.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:07.961 上午] Unity.Burst.dll compilation finished in 2767ms  source files re-parsed: 3 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:07.963 上午] Unity.Properties.dll compilation finished in 2616ms  source files re-parsed: 34 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:07.963 上午] Unity.PackageManagerUI.Editor.dll compilation finished in 2480ms  source files re-parsed: 52 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:07.965 上午] Unity.CollabProxy.Editor.dll compilation finished in 2349ms  source files re-parsed: 17 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:07.972 上午] Unity.Burst.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:07.974 上午] Unity.Properties.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:08.014 上午] Unity.CollabProxy.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:08.015 上午] Unity.PackageManagerUI.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:08.567 上午] Unity.Mathematics.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Mathematics.dll
+ (0,0): [04/09/2019 05:21:08.588 上午] Unity.Mathematics.dll compilation finished in 3746ms  source files re-parsed: 82 metadata reloaded: 208
+ (0,0): [04/09/2019 05:21:08.600 上午] Unity.Mathematics.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:08.902 上午] Unity.Properties.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:08.914 上午] Unity.Properties.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:09.061 上午] Unity.Burst.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.075 上午] Unity.Burst.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:09.138 上午] Unity.Properties.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.Editor.dll
+ (0,0): [04/09/2019 05:21:09.153 上午] Unity.Properties.Editor.dll compilation finished in 239ms  source files re-parsed: 23 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:09.164 上午] Unity.Properties.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.230 上午] Unity.Properties.Codegen.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.242 上午] Unity.Properties.Codegen.dll compiling...
+ (0,0): [04/09/2019 05:21:09.252 上午] Unity.Burst.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Burst.Editor.dll
+ (0,0): [04/09/2019 05:21:09.267 上午] Unity.Burst.Editor.dll compilation finished in 192ms  source files re-parsed: 10 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:09.279 上午] Unity.Burst.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.381 上午] Unity.Properties.Codegen.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Properties.Codegen.dll
+ (0,0): [04/09/2019 05:21:09.408 上午] Unity.Properties.Codegen.dll compilation finished in 169ms  source files re-parsed: 7 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:09.428 上午] Unity.Properties.Codegen.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.481 上午] Unity.Collections.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.508 上午] Unity.Collections.dll compiling...
+ (0,0): [04/09/2019 05:21:09.647 上午] Unity.Collections.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Collections.dll
+ (0,0): [04/09/2019 05:21:09.651 上午] Unity.Mathematics.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.678 上午] Unity.Mathematics.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:09.678 上午] Unity.Collections.dll compilation finished in 175ms  source files re-parsed: 12 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:09.698 上午] Unity.Collections.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:09.771 上午] Unity.Mathematics.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Mathematics.Editor.dll
+ (0,0): [04/09/2019 05:21:09.788 上午] Unity.Mathematics.Editor.dll compilation finished in 113ms  source files re-parsed: 4 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:09.808 上午] Unity.Mathematics.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:10.228 上午] Unity.Entities.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:10.248 上午] Unity.Entities.dll compiling...
+ (0,0): [04/09/2019 05:21:10.339 上午] Unity.Jobs.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:10.382 上午] Unity.Jobs.dll compiling...
+ (0,0): [04/09/2019 05:21:10.541 上午] Unity.Jobs.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Jobs.dll
+ (0,0): [04/09/2019 05:21:10.578 上午] Unity.Jobs.dll compilation finished in 196ms  source files re-parsed: 3 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:10.598 上午] Unity.Entities.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.dll
+ (0,0): [04/09/2019 05:21:10.609 上午] Unity.Jobs.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:10.618 上午] Unity.Entities.dll compilation finished in 369ms  source files re-parsed: 58 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:10.629 上午] Unity.Entities.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:11.011 上午] Unity.Jobs.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:11.028 上午] Unity.Jobs.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:11.098 上午] Unity.Jobs.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Jobs.Editor.dll
+ (0,0): [04/09/2019 05:21:11.128 上午] Unity.Jobs.Editor.dll compilation finished in 102ms  source files re-parsed: 1 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:11.146 上午] Unity.Jobs.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:11.388 上午] Unity.Entities.Hybrid.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:11.408 上午] Unity.Entities.Hybrid.dll compiling...
+ (0,0): [04/09/2019 05:21:11.501 上午] Unity.Entities.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Hybrid.dll
+ (0,0): [04/09/2019 05:21:11.531 上午] Unity.Entities.Hybrid.dll compilation finished in 124ms  source files re-parsed: 12 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:11.547 上午] Unity.Entities.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:12.202 上午] Unity.Transforms.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:12.229 上午] Unity.Transforms.dll compiling...
+ (0,0): [04/09/2019 05:21:12.328 上午] Unity.Transforms.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.dll
+ (0,0): [04/09/2019 05:21:12.348 上午] Unity.Transforms.dll compilation finished in 121ms  source files re-parsed: 9 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:12.368 上午] Unity.Transforms.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:12.988 上午] Unity.Rendering.Hybrid.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:13.018 上午] Unity.Rendering.Hybrid.dll compiling...
+ (0,0): [04/09/2019 05:21:13.138 上午] Unity.Rendering.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Rendering.Hybrid.dll
+ (0,0): [04/09/2019 05:21:13.158 上午] Unity.Rendering.Hybrid.dll compilation finished in 142ms  source files re-parsed: 9 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:13.162 上午] Unity.Entities.Properties.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:13.178 上午] Unity.Rendering.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:13.178 上午] Unity.Entities.Properties.dll compiling...
+ (0,0): [04/09/2019 05:21:13.271 上午] Unity.Transforms.Hybrid.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:13.298 上午] Unity.Transforms.Hybrid.dll compiling...
+ (0,0): [04/09/2019 05:21:13.311 上午] Unity.Entities.Properties.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Properties.dll
+ (0,0): [04/09/2019 05:21:13.338 上午] Unity.Entities.Properties.dll compilation finished in 163ms  source files re-parsed: 14 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:13.358 上午] Unity.Entities.Properties.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:13.382 上午] Unity.Transforms.Hybrid.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.Hybrid.dll
+ (0,0): [04/09/2019 05:21:13.398 上午] Unity.Transforms.Hybrid.dll compilation finished in 102ms  source files re-parsed: 6 metadata reloaded: 0
+ (0,0): [04/09/2019 05:21:13.418 上午] Unity.Transforms.Hybrid.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:14.479 上午] Unity.Entities.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:14.490 上午] Unity.Entities.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:14.630 上午] Unity.Entities.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Entities.Editor.dll
+ (0,0): [04/09/2019 05:21:14.645 上午] Unity.Entities.Editor.dll compilation finished in 155ms  source files re-parsed: 26 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:14.655 上午] Unity.Entities.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:14.995 上午] Unity.Transforms.Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:15.006 上午] Unity.Transforms.Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:15.067 上午] Unity.Transforms.Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Unity.Transforms.Editor.dll
+ (0,0): [04/09/2019 05:21:15.080 上午] Unity.Transforms.Editor.dll compilation finished in 74ms  source files re-parsed: 1 metadata reloaded: 2
+ (0,0): [04/09/2019 05:21:15.092 上午] Unity.Transforms.Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:30.097 上午] Assembly-CSharp.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:30.108 上午] Assembly-CSharp.dll compiling...
+ (0,0): [04/09/2019 05:21:30.304 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
+ (0,0): [04/09/2019 05:21:30.324 上午] Assembly-CSharp.dll compilation finished in 216ms  source files re-parsed: 56 metadata reloaded: 10
+ (0,0): [04/09/2019 05:21:30.337 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:21:31.047 上午] Assembly-CSharp-Editor.dll: no prior compilation found in cache. Caller PID: 10444
+ (0,0): [04/09/2019 05:21:31.058 上午] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [04/09/2019 05:21:31.117 上午] Assembly-CSharp-Editor.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp-Editor.dll
+ (0,0): [04/09/2019 05:21:31.132 上午] Assembly-CSharp-Editor.dll compilation finished in 73ms  source files re-parsed: 1 metadata reloaded: 1
+ (0,0): [04/09/2019 05:21:31.143 上午] Assembly-CSharp-Editor.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 10444
+ (0,0): [04/09/2019 05:25:15.764 上午] Compiler cache size is now 18.34 MB

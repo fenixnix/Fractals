@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Noise;
 
 public class NoiseGUI : MonoBehaviour
@@ -16,9 +14,16 @@ public class NoiseGUI : MonoBehaviour
     public float lacunarity = 1;
     public Vector2 offset;
 
+    public enum DrawMode { Gray,Color};
+    public DrawMode drawMode = DrawMode.Gray;
+
     [ContextMenu("Draw")]
     public void Draw() {
         noise.Generate(size, scale,octave,persistance,lacunarity,offset);
-        render.DrawRawDataGrayLevel(noise.rawData);
+        switch(drawMode) {
+            case DrawMode.Gray:render.DrawRawDataGrayLevel(noise.rawData);break;
+            case DrawMode.Color:render.DrawRawData(noise.rawData);break;
+            default: break;
+        }
     }
 }
