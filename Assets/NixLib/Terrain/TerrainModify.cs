@@ -26,13 +26,14 @@ public class TerrainModify : MonoBehaviour
                 data[y,x] = curve.Evaluate(noise.noise[x, y]);
             }
         }
-
         t.terrainData.SetHeights(0, 0, data);
     }
 
+    
     [ContextMenu("SetLayer")]
     public void SetLayer() {
         float[,,] map = new float[t.terrainData.alphamapWidth, t.terrainData.alphamapHeight, t.terrainData.alphamapLayers];
+        int[,] detail = new int[t.terrainData.detailWidth, t.terrainData.detailHeight];
         for(int y = 0; y < t.terrainData.alphamapHeight; y++) {
             for(int x = 0; x < t.terrainData.alphamapWidth; x++) {
                 for(int i = 0; i < map.GetLength(2); i++) {
@@ -46,6 +47,7 @@ public class TerrainModify : MonoBehaviour
                     }
                     if(index == 2) {
                         map[x, y, 3] = 1;
+                        detail[x, y] = 1;
                     }
                     if(index == 3) {
                         map[x, y, 0] = 1;
@@ -57,5 +59,6 @@ public class TerrainModify : MonoBehaviour
             }
         }
         t.terrainData.SetAlphamaps(0, 0, map);
+        TerrainPaint.ModifyDetail(t.terrainData, detail, 1);
     }
 }
