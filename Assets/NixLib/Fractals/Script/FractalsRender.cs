@@ -1,4 +1,5 @@
 ﻿using Fractals;
+using NixLib;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -44,11 +45,7 @@ public class FractalsRender : MonoBehaviour
         fsb.c = JuliaC;
         fsb.GenerateJulia(N, center, zoomSize ,pixelSize);
         SetPixels();
-
-        byte[] bytes = texture.EncodeToPNG();
-        //string filename = Application.streamingAssetsPath + "/ScreenShot.png";
-        string filename = "Assets/ScreenShot.png";
-        System.IO.File.WriteAllBytes(filename, bytes);
+        TextureToFile.Save(texture);
     }
 
     Color[] pixels;

@@ -320,6 +320,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/ASCII/ASCIIArt.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/ASCII/ASCIIColor.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/ASCII/ASCIIPage.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/ColorScaleByTime/ColorScaleByTime.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/ArrayPaint.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/Geometric.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/GLRender.cs
@@ -329,6 +330,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/RandomRateSelect.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/RandomTool.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/TextureRender.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/TextureToFile.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/ChaosGame.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/Determinat_IFS.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/DLA.cs
