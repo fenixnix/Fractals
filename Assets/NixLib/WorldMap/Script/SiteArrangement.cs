@@ -8,6 +8,7 @@ public class SiteArrangement : MonoBehaviour {
     public GameObject prefab;
     public Collider[] terrainColliders;
     public float ScanLength = 100f;
+    public Transform spawnRoot;
 
     [ContextMenu("Arrange")]
     public void Arrange() {
@@ -46,16 +47,37 @@ public class SiteArrangement : MonoBehaviour {
         AssetDatabase.CreateAsset(nation, "Assets/GenerateNation.asset");
     }
 
+    [ContextMenu("Landing")]
+    public void ObjLanding() {
+        for(int i = 0; i < spawnRoot.childCount; i++) {
+            var obj = spawnRoot.GetChild(i);
+            var ray = new Ray(obj.position, Vector3.down);
+            RaycastHit info = new RaycastHit();
+            if(Physics.Raycast(ray,out info)) {
+                obj.position = info.point;
+            }
+        }
+    }
+
+    public float pointSize = 1;
     private void OnDrawGizmos() {
         if(nation == null) return;
+        Vector3 PSize = new Vector3(pointSize, pointSize, pointSize);
         Gizmos.color = Color.green;
         foreach(var p in nation.sites) {
-            Gizmos.DrawCube(p.position, Vector3.one);
+            Gizmos.DrawCube(p.position,PSize);
         }
         Gizmos.color = Color.yellow;
         foreach(var p in nation.paths) {
             for(int i = 0; i < p.sites.Count-1; i++) {
                 Gizmos.DrawLine(nation[p.sites[i]].position, nation[p.sites[i + 1]].position);
+            }
+        }
+
+        if(spawnRoot != null) {
+            Gizmos.color = Color.red;
+            for(int i = 0; i < spawnRoot.childCount; i++) {
+                Gizmos.DrawCube(spawnRoot.GetChild(i).position, PSize);
             }
         }
     }
