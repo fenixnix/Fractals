@@ -1,16 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Noise;
+﻿using UnityEngine;
 
-public class TerrainModify : MonoBehaviour
-{
+#region
+[System.Serializable]
+public struct LayerBlendData {
+    public int index;
+    [Range(0,1f)]
+    public float rate;
+}
+
+[System.Serializable]
+public struct TerrainLayerData {
+    public string id;
+    public float height;
+    public LayerBlendData[] layerBlendData;
+}
+#endregion
+
+public class TerrainModify : MonoBehaviour {
     public Terrain t;
     public NoiseGUI noise;
     public AnimationCurve curve;
     public Region region = new Region();
-    
-    [ContextMenu("Generate")]
+
+
+    [ContextMenu("Random Generate")]
     public void Generate() {
         noise.Draw();
         SetPerlinHeight();
@@ -19,17 +32,16 @@ public class TerrainModify : MonoBehaviour
 
     [ContextMenu("Set")]
     public void SetPerlinHeight() {
-        Debug.Log(t.terrainData.heightmapWidth + "*" +t.terrainData.heightmapHeight);
+        Debug.Log(t.terrainData.heightmapWidth + "*" + t.terrainData.heightmapHeight);
         var data = new float[noise.noise.Height, noise.noise.Width];
         for(int y = 0; y < noise.noise.Height; y++) {
             for(int x = 0; x < noise.noise.Width; x++) {
-                data[y,x] = curve.Evaluate(noise.noise[x, y]);
+                data[y, x] = curve.Evaluate(noise.noise[x, y]);
             }
         }
         t.terrainData.SetHeights(0, 0, data);
     }
 
-    
     [ContextMenu("SetLayer")]
     public void SetLayer() {
         float[,,] map = new float[t.terrainData.alphamapWidth, t.terrainData.alphamapHeight, t.terrainData.alphamapLayers];
@@ -60,5 +72,76 @@ public class TerrainModify : MonoBehaviour
         }
         t.terrainData.SetAlphamaps(0, 0, map);
         TerrainPaint.ModifyDetail(t.terrainData, detail, 1);
+    }
+
+    public TerrainLayerData[] layerDatas;
+    public TerrainData[] terrainDatas;
+    public void SetLayerByHeight() {
+        foreach(var t in terrainDatas) {
+            SetLayerByHeight(t);
+            Debug.Log(t.GetHeight(0, 0));
+        }
+    }
+
+    public void SetLayerByHeight(TerrainData td) {
+        float[,,] map = new float[td.alphamapWidth, td.alphamapHeight, td.alphamapLayers];
+        int[,] detail = new int[td.detailWidth, td.detailHeight];
+        for(int y = 0; y < td.alphamapHeight; y++) {
+            for(int x = 0; x < td.alphamapWidth; x++) {
+                var height = td.GetHeight(x, y);
+                for(int i = 0; i < layerDatas.Length; i++) {
+                    if(height <= layerDatas[i].height) {
+                        foreach(var bd in layerDatas[i].layerBlendData) {
+                            map[y, x, bd.index] = bd.rate;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        td.SetAlphamaps(0, 0, map);
+    }
+
+    public Terrain[] terrains;
+    public Transform root;
+    public float ScanLength = 100f;
+    [ContextMenu("FlattenSideGround")]
+    public void FlattenSiteGround() {
+        if(terrains == null) return;
+        for(int i = 0; i < root.childCount; i++) {
+            var pSrc = transform.GetChild(i).transform.position + new Vector3(0, ScanLength, 0);
+            var pDir = new Vector3(0, -ScanLength * 2, 0);
+            var ray = new Ray(pSrc, pDir);
+            var hit = new RaycastHit();
+
+            foreach(var t in terrains) {
+                var coll = t.gameObject.GetComponent<TerrainCollider>();
+                if(coll.Raycast(ray, out hit, ScanLength * 2)) {
+                    Debug.Log(hit.point);
+                    var terrain = t;
+                    //TODO:FlattenGround;
+                    break;
+                }
+            }
+        }
+    }
+
+    public void DrawLayerPath(Nation nation) {
+        //float[,,] map = new float[td.alphamapWidth, td.alphamapHeight, td.alphamapLayers];
+        //int[,] detail = new int[td.detailWidth, td.detailHeight];
+        //for(int y = 0; y < td.alphamapHeight; y++) {
+        //    for(int x = 0; x < td.alphamapWidth; x++) {
+        //        var height = td.GetHeight(x, y);
+        //        for(int i = 0; i < layerDatas.Length; i++) {
+        //            if(height <= layerDatas[i].height) {
+        //                foreach(var bd in layerDatas[i].layerBlendData) {
+        //                    map[y, x, bd.index] = bd.rate;
+        //                }
+        //                break;
+        //            }
+        //        }
+        //    }
+        //}
+        //td.SetAlphamaps(0, 0, map);
     }
 }
