@@ -16,6 +16,9 @@ public class TerrainGenerateInspector : Editor {
         if(GUILayout.Button("Auto Fill Layer")) {
             terrain.SetLayer();
         }
+        if(GUILayout.Button("Auto Fill Layer by Height")) {
+            terrain.SetLayerByHeight();
+        }
         if(GUILayout.Button("Generate")) {
             terrain.Generate();
         }
