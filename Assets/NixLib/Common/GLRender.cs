@@ -6,7 +6,8 @@ using UnityEngine;
 namespace NixLib {
     public class GLRender: MonoBehaviour {
         private Material lineMaterial;
-        public List<Vector2> points = new List<Vector2>();
+        public List<Vector3> points = new List<Vector3>();
+        public List<Color> pointColors = new List<Color>();
         public List<Line> lines = new List<Line>();
 
         private void Start() {
@@ -38,8 +39,11 @@ namespace NixLib {
             GL.Begin(GL.QUADS);
             GL.Color(Color.yellow);
             //Draw Points;
-            foreach(var p in points) {
-                DrawPoint(new Vertex2(p.x, p.y));
+            for(int i = 0; i < points.Count; i++) {
+                if(i < pointColors.Count) {
+                    GL.Color(pointColors[i]);
+                }
+                DrawPoint(points[i]);
             }
             GL.End();
             GL.PopMatrix();
@@ -65,15 +69,28 @@ namespace NixLib {
             GL.Vertex3(f.Vertices[2].X, f.Vertices[2].Y, f.Vertices[2].Z);
         }
 
+        public float pointSize = 0.05f;
         private void DrawPoint(Vertex2 v) {
             float x = v.X;
             float y = v.Y;
-            float s = 0.05f;
+            float s = pointSize;
 
             GL.Vertex3(x + s, y + s, 0.0f);
             GL.Vertex3(x + s, y - s, 0.0f);
             GL.Vertex3(x - s, y - s, 0.0f);
             GL.Vertex3(x - s, y + s, 0.0f);
+        }
+
+        private void DrawPoint(Vector3 v) {
+            float x = v.x;
+            float y = v.y;
+            float z = v.z;
+            float s = pointSize;
+
+            GL.Vertex3(x + s, y + s, z);
+            GL.Vertex3(x + s, y - s, z);
+            GL.Vertex3(x - s, y - s, z);
+            GL.Vertex3(x - s, y + s, z);
         }
 
         private void DrawCircle(Vertex2 v, float radius, int segments) {

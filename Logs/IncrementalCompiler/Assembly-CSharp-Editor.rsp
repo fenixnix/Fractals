@@ -338,4 +338,5 @@
 -d:CSHARP_7_3_OR_NEWER
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/Editor/NoiseInspector.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/Editor/TerrainGenerateInspector.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/Editor/NationDataImport.cs
 -v:0
