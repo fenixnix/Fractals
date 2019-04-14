@@ -409,6 +409,8 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/FractalsNoise.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseAtom.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/NoiseGUI.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Terrain/RawDataReader.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Terrain/ScriptableObject/TerrainRawData.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Terrain/TerrainModify.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Terrain/TerrainPaint.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Terrain/TerrainTree.cs
@@ -416,9 +418,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/Nation.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/PolygonEdge.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/PolygonWorld.cs
--i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/RawDataReader.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/RegionPolygon.cs
--i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/ScriptableObject/TerrainRawData.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/SiteArrangement.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/SiteLabel.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/WorldGenerator.cs
