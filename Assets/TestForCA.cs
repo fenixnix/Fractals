@@ -1,4 +1,5 @@
 ﻿using Nixlib.CellularAutomata;
+using Nixlib.Dungeon;
 using Nixlib.Grid;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,6 +51,19 @@ public class TestForCA : MonoBehaviour
         text.text = tmp;
     }
 
+    NBSP bsp = new NBSP();
+    Grid2DInt bspMap;
+    [ContextMenu("Dungeon")]
+    public void Dungeon() {
+        
+        bsp.rooms.Add(new RectInt(0, 0, 64, 64));
+        DungeonStep();
+    }
 
-
+    [ContextMenu("Dungeon Step")]
+    public void DungeonStep() {
+        bspMap = new Grid2DInt(64, 64, 255);
+        bsp.Step();
+        text.text = bsp.PrintBSP(bspMap);
+    }
 }

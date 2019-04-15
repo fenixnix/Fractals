@@ -2,6 +2,9 @@
 
 namespace Nixlib.Grid {
     public class Grid2DInt : Grid2D<int> {
+        public Grid2DInt(int w, int h, int val) {
+            data = Create(w, h, val).data;
+        }
 
         public Grid2DInt Inverse() {
             var tmp = Create(Width, Height);

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 namespace Nixlib.Common {
-
     public class RandomByProbability<T>{
         private List<T> objs = new List<T>();
         private List<float> probabilitys = new List<float>();

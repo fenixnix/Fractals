@@ -8,7 +8,7 @@ namespace Nixlib.Grid {
         public int maxLength = 0;
         public List<Vector2Int> lastEdges = new List<Vector2Int>();
         public void Fill(Grid2DInt grid,Vector2Int point) {
-            flowGrid = Grid2DInt.Create(grid.Width, grid.Height);
+            flowGrid = Grid2D<int>.Create(grid.Width, grid.Height) as Grid2DInt;
             maxLength = 0;
             lastEdges.Clear();
             lastEdges.Add(point);

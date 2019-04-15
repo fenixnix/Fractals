@@ -36,7 +36,7 @@ public class DrawDLA : MonoBehaviour
 
     [ContextMenu("Init2D")]
     public void Init2D() {
-        grid2D = Grid2DInt.Create(GridSize, GridSize);
+        grid2D = Grid2D<int>.Create(GridSize, GridSize) as Grid2DInt;
         dla2 = new DLA2D();
         dla2.SetSeedPoint(grid2D, grid2D.Center);
 

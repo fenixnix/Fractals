@@ -11,7 +11,6 @@ static class TerrainTree{
         instance.widthScale = 1;
         instance.heightScale = 1;
 
-
         var relPos = pos - terrain.GetPosition();
         var position = new Vector3(relPos.x / terrain.terrainData.heightmapWidth, 0,
             relPos.z / terrain.terrainData.heightmapHeight);
@@ -19,7 +18,7 @@ static class TerrainTree{
         instance.position = position;
         terrain.AddTreeInstance(instance);
     }
-
+    #region Reflection
     /// <summary>
     /// 移除地形上的树，没有做多地图的处理
     /// </summary>
@@ -34,8 +33,6 @@ static class TerrainTree{
         v2.y /= Terrain.activeTerrain.terrainData.size.z;
         terrain.Invoke("RemoveTrees", v2, radius / Terrain.activeTerrain.terrainData.size.x, index);
     }
-
-    #region Reflection
     /// <summary>
     /// 通过反射和函数名调用非公有方法
     /// </summary>

@@ -5,7 +5,7 @@ namespace Nixlib.Grid {
         static public void Rect<T>(Grid2D<T> grid,RectInt rect,T val) {
             for(int row = 0; row < rect.height; row++) {
                 for(int col = 0; col < rect.width; col++) {
-                    grid[col, row] = val;
+                    grid[rect.x + col, rect.y + row] = val;
                 }
             }
         }
