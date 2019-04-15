@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Grid;
+using Nixlib.Grid;
 
 namespace Fractals{
     public class DLA2D {
-        public void SetSeedPoint(Grid2D grid,Vector2Int seed, Walker2D.WalkType type = Walker2D.WalkType.Direction4) {
+        public void SetSeedPoint(Grid2DInt grid,Vector2Int seed, Walker2D.WalkType type = Walker2D.WalkType.Direction4) {
             Grid2DPaint.Diamond(grid, seed.x, seed.y, 2);
             Walker2D.InitMovTab(type);
         }
 
-        public void Step(Grid2D grid,Grid2D.CorridorType type = Grid2D.CorridorType.Ortho) {
+        public void Step(Grid2DInt grid,Grid2DInt.CorridorType type = Grid2DInt.CorridorType.Ortho) {
             //var walkerPos = OutLineGenerate(grid);
             var walkerPos = RandomGenerate(grid);
             Walker2D walker = new Walker2D(walkerPos);
@@ -21,7 +21,7 @@ namespace Fractals{
             //grid[curPos.x,curPos.y] = 255;
         }
 
-        Vector2Int OutLineGenerate(Grid2D grid) {
+        Vector2Int OutLineGenerate(Grid2DInt grid) {
             var HV = Random.Range(0, 2);
             int pos = 0;
             var TBLR = Random.Range(0, 2);
@@ -48,7 +48,7 @@ namespace Fractals{
             return pointPos;
         }
 
-        Vector2Int RandomGenerate(Grid2D grid) {
+        Vector2Int RandomGenerate(Grid2DInt grid) {
             return new Vector2Int(Random.Range(0, grid.Width),
                 Random.Range(0,grid.Height));
         }

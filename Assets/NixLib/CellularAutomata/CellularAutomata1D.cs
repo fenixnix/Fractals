@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ToolBox.CellularAutomata
-{
+namespace Nixlib.CellularAutomata {
     public class CellularAutomata1D
     {
         byte rule = 0;
@@ -57,15 +54,17 @@ namespace ToolBox.CellularAutomata
             return res;
         }
 
-        public static void SelfTest()
+        public static string SelfTest()
         {
+            string txt = "";
             CellularAutomata1D ca = new CellularAutomata1D(30);
             string res = "000000000000100000000000000";
             for(int i = 0; i < 100; i++)
             {
-                Console.WriteLine(res);
+                txt += res + "\n";
                 res = ca.RunStep(res);
             }
+            return txt;
         }
     }
 }

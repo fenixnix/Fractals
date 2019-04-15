@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Nixlib.Grid;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using UnityEngine;
 
-namespace ToolBox.Map.CellularAutomata
-{
+namespace Nixlib.CellularAutomata {
     /*
     這個規則是由 Brian Silverman 於 1984 年所提出，它與 Logic Rule 幾乎一模一樣，
     唯一不同的是它定義細胞有三個狀態：死亡、存活與一個幽靈狀態。
@@ -28,21 +27,18 @@ namespace ToolBox.Map.CellularAutomata
 
     　　下面是大小 50x50 的 Brain Rule 生命遊戲的簡單範例 ， 前三個範例與 Logic Rule 的範例是一樣的 ，但是你會發現它們呈現的結果卻有所不同 ， 除了色彩的表現不一樣之外，Brain Rule 比 Logic Rule 更為容易達到穩定的狀態，畫面也不會那麼紊亂，你可以選擇「Random」的選項來做這樣的比較 。 Brain Rule 與 Life Rule 是生命遊戲中最常被提及的兩個規則，因此這兩個規則都發展出了許多著名的範例。
          */
-    class CA_Rule
-    {
+    class CellularAutomata2D {
         //cave s45678|b678  
 
         List<int> SurvivalsMap = new List<int>();
         List<int> BirthsMap = new List<int>();
         byte ghost = 0;
 
-        public CA_Rule()
-        {
+        public CellularAutomata2D() {
 
         }
 
-        public CA_Rule(string rule)
-        {
+        public CellularAutomata2D(string rule) {
             SetRule(rule);
         }
 
@@ -55,92 +51,94 @@ namespace ToolBox.Map.CellularAutomata
             BirthsMap = new List<int>(GetMap(birthStr));
 
             string ghostStr = GetRuleVal(rule, "g");
-            if (ghostStr.Length != 0)
-            {
+            if(ghostStr.Length != 0) {
                 ghost = byte.Parse(ghostStr);
             }
         }
 
-        IEnumerable<int> GetMap(string rule)
-        {
-            foreach (var c in rule)
-            {
+        IEnumerable<int> GetMap(string rule) {
+            foreach(var c in rule) {
                 yield return Convert.ToInt32(c) - 48;
             }
             yield break;
         }
 
-        string GetRuleVal(string rule, string para)
-        {
+        string GetRuleVal(string rule, string para) {
             var match = Regex.Match(rule, para + @"\d*");
-            if (match.Success)
-            {
+            if(match.Success) {
                 return match.Value.Substring(1);
             }
             return "";
         }
 
-        public NMap RunStep(NMap src)
-        {
-            NMap next = new NMap(src);
-            for (int y = 0; y < src.Height; y++)
-            {
-                for (int x = 0; x < src.Width; x++)
-                {
-                    var liveCnt = src.CountAround(x, y, NMap.Live);
+        static int Live = 255;
+        static int Dead = 0;
 
-                    if (src.IsDead(x, y))
-                    {
-                        if (BirthsMap.Contains(liveCnt))
-                        {
-                            next.SetBlock(x, y, NMap.Live);
+        public Grid2D<int> RunStep(Grid2D<int> src) {
+            Grid2D<int> next = Grid2D<int>.Create(src.Width, src.Height, 0);
+            for(int y = 0; y < src.Height; y++) {
+                for(int x = 0; x < src.Width; x++) {
+                    var liveCnt = src.CountAround(new Vector2Int(x, y), Live);
+                    if(src[x, y] == Dead) {
+                        if(BirthsMap.Contains(liveCnt)) {
+                            next[x, y] = Live;
                         }
-                        else
-                        {
-                            next.SetBlock(x, y, NMap.Dead);
+                        else {
+                            next[x, y] = Dead;
                         }
                         continue;
                     }
 
-                    if (src.Alive(x, y))
-                    {
-                        if (SurvivalsMap.Contains(liveCnt))
-                        {
-                            next.SetBlock(x, y, NMap.Live);
+                    if(src[x, y] == Live) {
+                        if(SurvivalsMap.Contains(liveCnt)) {
+                            next[x, y] = Live;
                         }
-                        else
-                        {
-                            next.SetBlock(x, y, ghost);
+                        else {
+                            next[x, y] = ghost;
                         }
                         continue;
                     }
 
-                    next.SetBlock(x, y, (byte)(src.GetBlock(x, y) - 1));
+                    if(src[x, y] > 0) {
+                        next[x, y] = src[x, y] - 1;
+                    }
                 }
             }
             return next;
         }
 
-        public NMap Run(NMap map, int cnt)
-        {
-            var tmp = new NMap(map);
-            for(int i = 0; i < cnt; i++)
-            {
+        public Grid2D<int> Run(Grid2D<int> map, int cnt) {
+            var tmp = Grid2D<int>.Create(map);
+            for(int i = 0; i < cnt; i++) {
                 tmp = RunStep(tmp);
             }
             return tmp;
         }
 
-        public static void SelfTest(string rule = "s2367b3457g3")
-        {
-            NMap world = new NMap(160, 80);
-            world.Noise(0.3f);
-            CA_Rule ca = new CA_Rule(rule);
-            for (int i = 0; i < 20; i++)
-            {
+        public static string SelfTest(string rule = "s2367b3457g3") {
+            Grid2D<int> world = Grid2D<int>.Create(40, 40);
+            world.Noise(255, 0.3f);
+            CellularAutomata2D ca = new CellularAutomata2D(rule);
+            string tmp = "";
+            for(int i = 0; i < 20; i++) {
+                
+
+                for(int y = 0; y < world.Height; y++) {
+                    for(int x = 0; x < world.Width; x++) {
+                        if(world[x, y] == 255) {
+                            tmp += "#";
+                        }
+                        else {
+                            tmp += "_";
+                        }
+                    }
+                    tmp += "\n";
+                }
+                tmp += "***\n";
+
                 world = ca.RunStep(world);
-                Console.WriteLine(world.Print());
             }
+            return tmp;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Grid {
+namespace Nixlib.Grid {
     public class Walker2D {
         public enum WalkType {Direction4,Direction8};
 
@@ -18,17 +18,17 @@ namespace Grid {
         static List<Vector2Int> moveTable = new List<Vector2Int>();
         public static void InitMovTab(WalkType type) {
             moveTable.Clear();
-            foreach(var p in Grid2D.ortho) {
+            foreach(var p in Grid2D<int>.ortho) {
                 moveTable.Add(p);
             }
             if(type == WalkType.Direction8) {
-                foreach(var p in Grid2D.diago) {
+                foreach(var p in Grid2DInt.diago) {
                     moveTable.Add(p);
                 }
             }
         }
 
-        public Vector2Int Step(Grid2D grid) {
+        public Vector2Int Step(Grid2DInt grid) {
             Vector2Int nextPos;
             do {
                 nextPos = curPos + moveTable[Random.Range(0, moveTable.Count)];

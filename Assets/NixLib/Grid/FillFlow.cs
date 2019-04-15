@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Grid {
+namespace Nixlib.Grid {
     public class FillFlow {
-        public Grid2D flowGrid;
+        public Grid2DInt flowGrid;
         public int maxLength = 0;
         public List<Vector2Int> lastEdges = new List<Vector2Int>();
-        public void Fill(Grid2D grid,Vector2Int point) {
-            flowGrid = Grid2D.Create(grid.Width, grid.Height);
+        public void Fill(Grid2DInt grid,Vector2Int point) {
+            flowGrid = Grid2DInt.Create(grid.Width, grid.Height);
             maxLength = 0;
             lastEdges.Clear();
             lastEdges.Add(point);
             Flow(grid, 0);
         }
 
-        void Flow(Grid2D grid,byte length) {
+        void Flow(Grid2DInt grid,byte length) {
             if(lastEdges.Count <= 0) return;
             foreach(var point in lastEdges) {
                 flowGrid[point] = length;
@@ -24,7 +24,7 @@ namespace Grid {
             maxLength = Math.Max(length, maxLength);
             List<Vector2Int> tmpPoints = new List<Vector2Int>();
             foreach(var point in lastEdges) {
-                foreach(var p in Grid2D.ortho) {
+                foreach(var p in Grid2DInt.ortho) {
                     var pp = point + p;
                     if(Contain(pp, tmpPoints))continue;
                     if((grid[pp] != 255) || (flowGrid[pp] != 0)) {

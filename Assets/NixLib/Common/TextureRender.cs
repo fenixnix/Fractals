@@ -1,4 +1,4 @@
-﻿using Grid;
+﻿using Nixlib.Grid;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +8,7 @@ public class TextureRender : MonoBehaviour
     public Texture2D texture;
     public Region region;
 
-    public void Draw(Grid2D grid,float MaxValue = 1f) {
+    public void Draw(Grid2DInt grid,float MaxValue = 1f) {
         texture = new Texture2D(grid.Width, grid.Height);
         texture.filterMode = FilterMode.Point;
         Color[] colors = new Color[grid.Width * grid.Height];

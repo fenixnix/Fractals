@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Geometric;
-using Grid;
+using Nixlib.Grid;
 using NixLib.Common;
 using Fractals;
 

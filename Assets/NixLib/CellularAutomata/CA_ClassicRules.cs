@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ToolBox.Map.CellularAutomata
+namespace Nixlib.CellularAutomata
 {
     public class CAClassicRules
     {

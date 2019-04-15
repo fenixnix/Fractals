@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
-namespace Grid {
+namespace Nixlib.Grid {
     public class Grid2DPaint {
-        static public void Rect(Grid2D grid, int x, int y, int size = 3, int data = 255) {
+        static public void Rect(Grid2DInt grid, int x, int y, int size = 3, int data = 255) {
             for(int row = -size; row < size + 1; row++) {
                 for(int col = -size; col < size + 1; col++) {
                     grid[x + col, y + row] = data;
@@ -10,7 +10,7 @@ namespace Grid {
             }
         }
 
-        static public void Diamond(Grid2D grid, int x, int y, int size = 3, int data = 255) {
+        static public void Diamond(Grid2DInt grid, int x, int y, int size = 3, int data = 255) {
             for(int row = -size; row < size + 1; row++) {
                 for(int col = -size; col < size + 1; col++) {
                     int dis = Math.Abs(row) + Math.Abs(col);
@@ -21,7 +21,7 @@ namespace Grid {
             }
         }
 
-        static public void Line(Grid2D grid, Vector2Int p1,Vector2Int p2, int width = 0, int data = 255) {
+        static public void Line(Grid2DInt grid, Vector2Int p1,Vector2Int p2, int width = 0, int data = 255) {
             Diamond(grid, p1.x, p1.y, width, data);
             Diamond(grid, p2.x, p2.y, width, data);
 

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ToolBox.Map.CellularAutomata;
+using Nixlib.CellularAutomata;
 
 namespace ToolBox.Map
 {

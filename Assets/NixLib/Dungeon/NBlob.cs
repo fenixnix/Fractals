@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ToolBox.Map.CellularAutomata;
+using Nixlib.CellularAutomata;
 
-namespace ToolBox.Map
+namespace Nixlib.Dungeon
 {
     class NBlob
     {
@@ -171,7 +171,7 @@ namespace ToolBox.Map
         {
             NMap map = new NMap(64, 32);
             map.Noise(0.45f);
-            CA_Rule rule = new CA_Rule("s45678b678");
+            CellularAutomata2D rule = new CellularAutomata2D("s45678b678");
             map = rule.RunStep(map);
             map = rule.RunStep(map);
             Console.WriteLine(map.Print());

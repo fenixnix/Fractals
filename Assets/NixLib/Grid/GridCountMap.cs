@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grid {
+namespace Nixlib.Grid {
     public class GridCountMap {
-        public Grid2D CountMap;
+        public Grid2DInt CountMap;
         public int MaxCount = 0;
-        public void Count(Grid2D grid,int value) {
-            CountMap = Grid2D.Create(grid.Width, grid.Height);
+        public void Count(Grid2DInt grid,int value) {
+            CountMap = Grid2DInt.Create(grid.Width, grid.Height);
             MaxCount = 0;
             for(int y = 0; y < grid.Height; y++) {
                 for(int x = 0; x < grid.Width; x++) {

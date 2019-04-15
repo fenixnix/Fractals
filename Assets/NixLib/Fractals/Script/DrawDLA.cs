@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fractals;
-using Grid;
+using Nixlib.Grid;
 using UnityEngine.UI;
 
 public class DrawDLA : MonoBehaviour
@@ -24,7 +24,7 @@ public class DrawDLA : MonoBehaviour
         dla.Step();
     }
 
-    public Grid2D grid2D;
+    public Grid2DInt grid2D;
     public int GridSize = 50;
     public FillFlow fillFlow = new FillFlow();
     public GridCountMap cntMap = new GridCountMap();
@@ -36,7 +36,7 @@ public class DrawDLA : MonoBehaviour
 
     [ContextMenu("Init2D")]
     public void Init2D() {
-        grid2D = Grid2D.Create(GridSize, GridSize);
+        grid2D = Grid2DInt.Create(GridSize, GridSize);
         dla2 = new DLA2D();
         dla2.SetSeedPoint(grid2D, grid2D.Center);
 
@@ -63,6 +63,8 @@ public class DrawDLA : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
+        //Test
+        return;
         if(!Ready) return;
         Step();
         var size = dla.CubeSize * 2 + 1;
