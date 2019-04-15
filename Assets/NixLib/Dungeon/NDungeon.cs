@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Nixlib.CellularAutomata;
+using Nixlib.Grid;
+using UnityEngine;
 
-namespace ToolBox.Map
-{
+namespace Nixlib.Dungeon {
     public enum DungeonBuilding { Null = 0, Port = 1, Door, Treasure, Trap, Enemy,Tree,Misc = 254, Wall = 255, Block = 256 };
 
     public static class NDungeon
@@ -12,7 +13,7 @@ namespace ToolBox.Map
         {
             NMap map = new NMap(width, height);
             map.Noise(rate);
-            CA_Rule rule = new CA_Rule("s45678b5678");
+            CellularAutomata2D rule = new CellularAutomata2D("s45678b5678");
             map = rule.Run(map, 3);
             var blobs = NBlob.Find(map, 255);
             blobs.FillByLeftBlob(map, holeLeft, 0);
@@ -78,8 +79,8 @@ namespace ToolBox.Map
 
         public static NMap RoomWallMap(int width, int height)
         {
-            NMap map = new NMap(width, height, 255);
-            NBSP.Division(map, new NRect(0, 0, map.Width, map.Height));
+            Grid2DInt map = Grid2D<int>.Create(width, height, 255) as Grid2DInt;
+            NBSP.Division(map, new RectInt(0, 0, map.Width, map.Height));
             var blobs = NBlob.Find(map, 0);
             blobs.FillByLeftBlob(map, 12);
             blobs.AxisConnect(map, 0);

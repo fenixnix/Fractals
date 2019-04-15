@@ -2,7 +2,15 @@
 using UnityEngine;
 namespace Nixlib.Grid {
     public class Grid2DPaint {
-        static public void Rect(Grid2DInt grid, int x, int y, int size = 3, int data = 255) {
+        static public void Rect<T>(Grid2D<T> grid,RectInt rect,T val) {
+            for(int row = 0; row < rect.height; row++) {
+                for(int col = 0; col < rect.width; col++) {
+                    grid[col, row] = val;
+                }
+            }
+        }
+
+        static public void Square(Grid2DInt grid, int x, int y, int size = 3, int data = 255) {
             for(int row = -size; row < size + 1; row++) {
                 for(int col = -size; col < size + 1; col++) {
                     grid[x + col, y + row] = data;

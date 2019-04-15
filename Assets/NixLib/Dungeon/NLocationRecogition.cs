@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ToolBox.Map
-{
+namespace Nixlib.Dungeon {
     public class NLocationRecogition
     {
         static public void FindDoor(NMap map, byte mark)

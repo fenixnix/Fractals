@@ -151,3 +151,23 @@
  (0,0): [04/15/2019 07:00:21.066 上午] Assembly-CSharp.dll compilation finished in 155ms  source files re-parsed: 2 metadata reloaded: 0
  (0,0): [04/15/2019 07:00:21.078 上午] Assembly-CSharp.dll: compilation was cached, 2 file(s) were found to have changed. Caller PID: 22724
  (0,0): [04/15/2019 07:00:21.089 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 22724
+ (0,0): [04/15/2019 07:02:32.221 上午] Assembly-CSharp.dll compiling...
+ (0,0): [04/15/2019 07:02:32.378 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
+ (0,0): [04/15/2019 07:02:32.391 上午] Assembly-CSharp.dll compilation finished in 168ms  source files re-parsed: 12 metadata reloaded: 0
+ (0,0): [04/15/2019 07:02:32.402 上午] Assembly-CSharp.dll: compilation was cached, 12 file(s) were found to have changed. Caller PID: 22724
+ (0,0): [04/15/2019 07:02:32.413 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 22724
+ (0,0): [04/15/2019 07:07:35.474 上午] Assembly-CSharp.dll compiling...
+ (0,0): [04/15/2019 07:07:35.651 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
+ (0,0): [04/15/2019 07:07:35.664 上午] Assembly-CSharp.dll compilation finished in 191ms  source files re-parsed: 2 metadata reloaded: 0
+ (0,0): [04/15/2019 07:07:35.676 上午] Assembly-CSharp.dll: compilation was cached, 2 file(s) were found to have changed. Caller PID: 22724
+ (0,0): [04/15/2019 07:07:35.687 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 22724
+ (0,0): [04/15/2019 07:37:57.219 上午] Assembly-CSharp.dll compiling...
+ (0,0): [04/15/2019 07:37:57.332 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
+ (0,0): [04/15/2019 07:37:57.356 上午] Assembly-CSharp.dll compilation finished in 137ms  source files re-parsed: 2 metadata reloaded: 0
+ (0,0): [04/15/2019 07:37:57.367 上午] Assembly-CSharp.dll: compilation was cached, 2 file(s) were found to have changed. Caller PID: 22724
+ (0,0): [04/15/2019 07:37:57.378 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 22724
+ (0,0): [04/15/2019 07:39:57.639 上午] Assembly-CSharp.dll compiling...
+ (0,0): [04/15/2019 07:39:57.757 上午] Assembly-CSharp.dll: emitting IL to : D:\UnityProject\Fractals\Temp\Assembly-CSharp.dll
+ (0,0): [04/15/2019 07:39:57.770 上午] Assembly-CSharp.dll compilation finished in 131ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [04/15/2019 07:39:57.782 上午] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed. Caller PID: 22724
+ (0,0): [04/15/2019 07:39:57.793 上午] Assembly-CSharp.dll: session status updated to IncrementalCompilationStatus.Finished for Caller PID: 22724

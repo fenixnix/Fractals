@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ToolBox.Map
-{
+namespace Nixlib.Dungeon {
     public class NMove
     {
         public static void Noise(NMap map, NLocate src,NLocate dst,byte movType, byte digType)

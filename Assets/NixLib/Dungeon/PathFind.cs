@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using ToolBox.Map;
 
-namespace ToolBox
-{
+namespace Nixlib.Dungeon {
     public class PathFind
     {
         static List<NLocate> GPath = new List<NLocate>();

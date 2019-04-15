@@ -8,8 +8,6 @@
 //  @ Author : 
 //
 //
-
-
 using System;
 using System.Text.RegularExpressions;
 
@@ -18,7 +16,6 @@ namespace ToolBox
     public class RandomName
     {
         static string[] prefix = "Dark,Fronzen,Plague,Void,Twisted,Cerulean,Death,Evil,Silver,Gray,Green".Split(',');
-
         static public string GenerateName()
         {
             string name = string.Empty;

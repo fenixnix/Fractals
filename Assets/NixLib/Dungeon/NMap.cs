@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ToolBox.Map
-{
+namespace Nixlib.Dungeon {
     public class NMap
     {
         public static byte Live = 255;

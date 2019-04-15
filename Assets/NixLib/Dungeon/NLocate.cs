@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ToolBox.Map
-{
+namespace Nixlib.Dungeon {
     public enum Direction { Up, Down, Left, Right };
 
     public class NLocate

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Nixlib.CellularAutomata;
 
 namespace Nixlib.Dungeon
@@ -172,8 +170,8 @@ namespace Nixlib.Dungeon
             NMap map = new NMap(64, 32);
             map.Noise(0.45f);
             CellularAutomata2D rule = new CellularAutomata2D("s45678b678");
-            map = rule.RunStep(map);
-            map = rule.RunStep(map);
+            //map = rule.RunStep(map);
+            //map = rule.RunStep(map);
             Console.WriteLine(map.Print());
             var blobs = Find(map, 255);
             blobs.Blobs[blobs.LagestBlob()].Fill(map, 0);
