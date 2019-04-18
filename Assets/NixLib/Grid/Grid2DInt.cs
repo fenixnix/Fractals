@@ -7,6 +7,25 @@ namespace Nixlib.Grid {
             data = Create(w, h, val).data;
         }
 
+        public Grid2DInt(Grid2D<int> src) {
+            data = Create(src.Width,src.Height).data;
+            for(int y = 0; y < Height; y++) {
+                for(int x = 0; x < Width; x++) {
+                    this[x, y] = src[x, y];
+                }
+            }
+        }
+
+        public Grid2D<int> GetGrid() {
+            Grid2D<int> tmp = Create(Width, Height);
+            for(int y = 0; y < Height; y++) {
+                for(int x = 0; x < Width; x++) {
+                    tmp[x, y] = this[x, y];
+                }
+            }
+            return tmp;
+        }
+
         public Grid2DInt Inverse() {
             var tmp = Create(Width, Height);
             for(int y = 0; y < Height; y++) {

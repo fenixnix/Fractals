@@ -7,9 +7,6 @@ namespace Fractals {
     public class NixFractals : MonoBehaviour {
         public int n = 3;
         List<GeoObj> squares = new List<GeoObj>();
-
-        public DrawPixel drawPixel;
-
         private void Start() {
             Test_Sier_Sponge();
             GenerateObj();

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Fractals;
 using Nixlib.Grid;
 using UnityEngine.UI;
@@ -46,20 +44,32 @@ public class DrawDLA : MonoBehaviour
         render.Draw(grid2D);
     }
 
+    public bool DrawBorder = false;
+    public bool DrawCountMap = true;
+    public bool DrawFillFlow = false;
+
     [ContextMenu("Step2D")]
     public void Step2D() {
-        for(int i = 0; i < GridSize * GridSize / 16; i++) {
+        for(int i = 0; i < GridSize * GridSize / 32; i++) {
             dla2.Step(grid2D);
         }
-        //text.text = grid2D.Inverse().Print();
-
-        //render.Draw(grid2D);
-
-        //fillFlow.Fill(grid2D, grid2D.Center);
-        //render.Draw(fillFlow.flowGrid, fillFlow.maxLength);
         grid2D.Save();
-        cntMap.Count(grid2D, 255);
-        render.Draw(cntMap.CountMap, cntMap.MaxCount);
+
+        if(DrawFillFlow) {
+            fillFlow.Fill(grid2D, grid2D.Center);
+            render.Draw(fillFlow.flowGrid, fillFlow.maxLength);
+        }
+
+        if(DrawBorder) {
+            var tmpSrcGrid = grid2D.GetGrid();
+            var tmpDstGrid = WaterShed.Run(tmpSrcGrid, Vector2Int.zero, 0, 1);
+            render.Draw(new Grid2DInt(tmpDstGrid));
+        }
+
+        if(DrawCountMap) {
+            cntMap.Count(grid2D, 255);
+            render.Draw(cntMap.CountMap, cntMap.MaxCount);
+        }
     }
 
     [ContextMenu("TestLoad")]
@@ -68,23 +78,5 @@ public class DrawDLA : MonoBehaviour
         grid2D.Load();
         cntMap.Count(grid2D, 255);
         render.Draw(cntMap.CountMap, cntMap.MaxCount);
-    }
-
-    private void OnDrawGizmos() {
-        //Test
-        return;
-        if(!Ready) return;
-        Step();
-        var size = dla.CubeSize * 2 + 1;
-        for(int z = 0; z < size; z++) {
-            for(int y = 0; y < size; y++) {
-                for(int x = 0; x < size; x++) {
-                    if(dla.pixels[z, y, x]) {
-                        Gizmos.DrawCube(new Vector3(x, y, z) - 
-                            new Vector3(dla.CubeSize, dla.CubeSize, dla.CubeSize), Vector3.one);
-                    }
-                }
-            }
-        }
     }
 }
