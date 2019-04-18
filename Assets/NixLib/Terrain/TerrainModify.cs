@@ -14,6 +14,39 @@ public struct TerrainLayerData {
     public float height;
     public LayerBlendData[] layerBlendData;
 }
+
+[System.Serializable]
+public struct RegionType {
+    public string name;
+    [Range(0, 1f)]
+    public float height;
+    public Color color;
+}
+
+[System.Serializable]
+public class Region {
+    public RegionType[] region;
+
+    public Color this[float val] {
+        get {
+            for(int i = 0; i < region.Length; i++) {
+                if(val <= region[i].height) {
+                    return region[i].color;
+                }
+            }
+            return Color.black;
+        }
+    }
+
+    public int GetIndex(float val) {
+        for(int i = 0; i < region.Length; i++) {
+            if(val <= region[i].height) {
+                return i;
+            }
+        }
+        return region.Length - 1;
+    }
+}
 #endregion
 
 public class TerrainModify : MonoBehaviour {
@@ -21,7 +54,6 @@ public class TerrainModify : MonoBehaviour {
     public NoiseGUI noise;
     public AnimationCurve curve;
     public Region region = new Region();
-
 
     [ContextMenu("Random Generate")]
     public void Generate() {

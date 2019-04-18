@@ -5,6 +5,7 @@
 -out:D:/UnityProject/Fractals/Temp/Assembly-CSharp.dll
 -nostdlib
 -unsafe
+-r:D:/UnityProject/Fractals/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -314,8 +315,10 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
+-d:CROSS_PLATFORM_INPUT
 -d:CSHARP_7_OR_LATER
 -d:CSHARP_7_3_OR_NEWER
+-i:D:/UnityProject/Fractals/Assets/Magema.cs
 -i:D:/UnityProject/Fractals/Assets/MovTest.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/ASCII/ASCIIArt.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/ASCII/ASCIIColor.cs
@@ -328,6 +331,12 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/CycleIndex.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/Geometric.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/GLRender.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/AnimClipPack.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/AudioClipPack.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/GameObjectPack.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/ObjectPack.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/SpritePack.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Common/Packer/TextPack.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/RandomByProbability.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/RandomName.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/RandomNum.cs
@@ -337,7 +346,13 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/TextureToFile.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/Unity/UCS.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Common/Unity/UIBillboard.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/CaveGenerator.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/DungeonBuilder.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/DungeonRoom.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/Grid3D.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/LavaFlow.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/NBSP.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Dungeon/ObjBuilder.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/ChaosGame.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/Determinat_IFS.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Fractals/Script/DLA.cs
@@ -363,6 +378,7 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/Grid2DPaint.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/GridCountMap.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/Grid/Walker2D.cs
+-i:D:/UnityProject/Fractals/Assets/NixLib/Grid/WaterShed.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/HullDelaunayVoronoi/Scripts/Delaunay/DelaunayCell.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/HullDelaunayVoronoi/Scripts/Delaunay/DelaunayTriangulation.cs
 -i:D:/UnityProject/Fractals/Assets/NixLib/HullDelaunayVoronoi/Scripts/Delaunay/DelaunayTriangulation2.cs
@@ -415,5 +431,13 @@
 -i:D:/UnityProject/Fractals/Assets/NixLib/WorldMap/Script/WorldGenerator.cs
 -i:D:/UnityProject/Fractals/Assets/RotationSpeed.cs
 -i:D:/UnityProject/Fractals/Assets/Rotator.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Menu/Scripts/PauseMenu.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Scripts/CameraSwitch.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Scripts/LevelReset.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Scripts/ParticleSceneControls.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs
+-i:D:/UnityProject/Fractals/Assets/SampleScenes/Scripts/SlowMoButton.cs
 -i:D:/UnityProject/Fractals/Assets/TestForCA.cs
 -v:0

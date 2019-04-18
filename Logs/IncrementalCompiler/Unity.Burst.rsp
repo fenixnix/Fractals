@@ -311,6 +311,7 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
+-d:CROSS_PLATFORM_INPUT
 -d:CSHARP_7_OR_LATER
 -d:CSHARP_7_3_OR_NEWER
 -i:D:/UnityProject/Fractals/Library/PackageCache/com.unity.burst@0.2.4-preview.37/Runtime/BurstCompileAttribute.cs

@@ -4,7 +4,7 @@ using NixLib;
 using System.Collections.Generic;
 using UnityEngine;
 using HullDelaunayVoronoi.Delaunay;
-using NixLib.WorldMap;
+using Nixlib.WorldMap;
 
 public class WorldGenerator : MonoBehaviour
 {

@@ -9,7 +9,7 @@ namespace Nixlib.Grid {
         public Grid2DInt CountMap;
         public int MaxCount = 0;
         public void Count(Grid2DInt grid,int value) {
-            CountMap = Grid2D<int>.Create(grid.Width, grid.Height) as Grid2DInt;
+            CountMap = new Grid2DInt(grid.Width,grid.Height);
             MaxCount = 0;
             for(int y = 0; y < grid.Height; y++) {
                 for(int x = 0; x < grid.Width; x++) {

@@ -16,7 +16,7 @@ namespace Fractals{
             Vector2Int curPos = Vector2Int.zero;
             do {
                 curPos = walker.Step(grid);
-            } while(!grid.NextTo(curPos,type));
+            } while(!grid.NextTo(curPos,type,255));
             Grid2DPaint.Diamond(grid, curPos.x, curPos.y, 2);
             //grid[curPos.x,curPos.y] = 255;
         }

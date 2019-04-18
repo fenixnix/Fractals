@@ -194,7 +194,6 @@ GameObject:
   - component: {fileID: 824378952}
   - component: {fileID: 824378955}
   - component: {fileID: 824378956}
-  - component: {fileID: 824378957}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -304,15 +303,3 @@ MonoBehaviour:
   pointColors: []
   lines: []
   pointSize: 0.01
---- !u!114 &824378957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824378951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d3d3aa6acabe2e43ba2bfae1a91a79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

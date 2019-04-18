@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace NixLib.WorldMap{
+namespace Nixlib.WorldMap{
     public class PolygonEdge {
         public Vector3 A;
         public Vector3 B;

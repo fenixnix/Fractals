@@ -5,7 +5,9 @@
 -out:D:/UnityProject/Fractals/Temp/Assembly-CSharp-Editor.dll
 -nostdlib
 -unsafe
+-r:D:/UnityProject/Fractals/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
 -r:D:/UnityProject/Fractals/Library/ScriptAssemblies/Assembly-CSharp.dll
+-r:D:/UnityProject/Fractals/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.3.0f2\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -334,6 +336,7 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
+-d:CROSS_PLATFORM_INPUT
 -d:CSHARP_7_OR_LATER
 -d:CSHARP_7_3_OR_NEWER
 -i:D:/UnityProject/Fractals/Assets/NixLib/Noise/Script/Editor/NoiseInspector.cs

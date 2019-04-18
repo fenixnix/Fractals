@@ -7,15 +7,17 @@ namespace Nixlib.Grid {
         public Grid2DInt flowGrid;
         public int maxLength = 0;
         public List<Vector2Int> lastEdges = new List<Vector2Int>();
-        public void Fill(Grid2DInt grid,Vector2Int point) {
-            flowGrid = Grid2D<int>.Create(grid.Width, grid.Height) as Grid2DInt;
+
+        public Grid2DInt Fill(Grid2DInt grid,Vector2Int point) {
+            flowGrid = new Grid2DInt(grid.Width, grid.Height);
             maxLength = 0;
             lastEdges.Clear();
             lastEdges.Add(point);
             Flow(grid, 0);
+            return flowGrid;
         }
 
-        void Flow(Grid2DInt grid,byte length) {
+        void Flow(Grid2DInt grid,int length) {
             if(lastEdges.Count <= 0) return;
             foreach(var point in lastEdges) {
                 flowGrid[point] = length;

@@ -3,7 +3,7 @@ using HullDelaunayVoronoi.Voronoi;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NixLib.WorldMap {
+namespace Nixlib.WorldMap {
     public class PolygonWorld {
         public Rect roi = new Rect(-1, -1, 2, 2);
         public List<RegionPolygon> regions = new List<RegionPolygon>();

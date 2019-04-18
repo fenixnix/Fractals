@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619a7d27da0a1ee41b072237e0be01d0, type: 3}
+  m_Name: CaveFloorMisc
+  m_EditorClassIdentifier: 
+  mode: 2
+  objs:
+  - {fileID: 129420, guid: ff5c549bd91cb7c43ba46386303671e8, type: 3}
+  - {fileID: 155898, guid: 50aa90a81020d7f4d9882a4bede1b4f3, type: 3}
+  - {fileID: 147340, guid: ff8e23c9e979e9d4b8760b6c3e81a87a, type: 3}
+  - {fileID: 120426, guid: dcf56c462b61a4c43b82009dc5a23df2, type: 3}
+  - {fileID: 122892, guid: 20002ad77119e9849a8815f85c128ba3, type: 3}
+  - {fileID: 147436, guid: c7a5c2b51e6ab424fb46547daf81a610, type: 3}
+  - {fileID: 187062, guid: 3da6cabdb2d06ad4ab1068a9b2a231cd, type: 3}
+  - {fileID: 190932, guid: 20e0bf298681fcd4693097c822277593, type: 3}
+  - {fileID: 164116, guid: 9e2073d9f1afc544ca0b3f8d272d568e, type: 3}
+  - {fileID: 158038, guid: b9cff604e7a459c4581b58993fc28f1d, type: 3}
+  - {fileID: 136120, guid: ffc6869ab4137a74d89484a41f685f9d, type: 3}
+  - {fileID: 130514, guid: 3bb5571f612e6d14d82b7a56913e82af, type: 3}
+  - {fileID: 138052, guid: 7060ec5f9f6d83b4ebcd4956b3abdf63, type: 3}
+  - {fileID: 188464, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
+  - {fileID: 188314, guid: 7b433e4840fda0f48b0428546af484d5, type: 3}

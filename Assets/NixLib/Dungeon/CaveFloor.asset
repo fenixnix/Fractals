@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619a7d27da0a1ee41b072237e0be01d0, type: 3}
+  m_Name: CaveFloor
+  m_EditorClassIdentifier: 
+  mode: 2
+  objs:
+  - {fileID: 178744, guid: 7952f7e6ac9b93b4682e63e68d9a2f74, type: 3}
+  - {fileID: 185764, guid: bb14b7d9fa63ecb4f94207e14e280405, type: 3}

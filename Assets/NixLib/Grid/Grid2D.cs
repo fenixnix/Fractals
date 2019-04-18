@@ -38,6 +38,16 @@ namespace Nixlib.Grid {
             }
         }
 
+        public Grid2D<T> Clone() {
+            var tmp = Create(Width, Height);
+            for(int y = 0; y < Height; y++) {
+                for(int x = 0; x < Width; x++) {
+                    tmp[x, y] = this[x, y];
+                }
+            }
+            return tmp;
+        }
+
         public bool Inside(int x, int y) {
             if(x < 0) return false;
             if(x >= Width) return false;
@@ -88,6 +98,10 @@ namespace Nixlib.Grid {
                 }
             }
             return cnt;
+        }
+
+        public bool Is(Vector2Int point,T val) {
+            return this[point.x, point.y].Equals(val);
         }
 
         static public Grid2D<T> Create(int w, int h, T def = default(T)) {

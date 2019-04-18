@@ -36,7 +36,7 @@ public class DrawDLA : MonoBehaviour
 
     [ContextMenu("Init2D")]
     public void Init2D() {
-        grid2D = Grid2D<int>.Create(GridSize, GridSize) as Grid2DInt;
+        grid2D = new Grid2DInt(GridSize, GridSize,0);
         dla2 = new DLA2D();
         dla2.SetSeedPoint(grid2D, grid2D.Center);
 
@@ -48,16 +48,24 @@ public class DrawDLA : MonoBehaviour
 
     [ContextMenu("Step2D")]
     public void Step2D() {
-        for(int i = 0; i < GridSize * GridSize / 8; i++) {
+        for(int i = 0; i < GridSize * GridSize / 16; i++) {
             dla2.Step(grid2D);
         }
-        text.text = grid2D.Inverse().Print();
+        //text.text = grid2D.Inverse().Print();
 
         //render.Draw(grid2D);
 
         //fillFlow.Fill(grid2D, grid2D.Center);
         //render.Draw(fillFlow.flowGrid, fillFlow.maxLength);
+        grid2D.Save();
+        cntMap.Count(grid2D, 255);
+        render.Draw(cntMap.CountMap, cntMap.MaxCount);
+    }
 
+    [ContextMenu("TestLoad")]
+    public void TestLoadFile() {
+        Init2D();
+        grid2D.Load();
         cntMap.Count(grid2D, 255);
         render.Draw(cntMap.CountMap, cntMap.MaxCount);
     }

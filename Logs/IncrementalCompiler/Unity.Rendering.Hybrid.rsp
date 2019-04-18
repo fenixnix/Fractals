@@ -318,6 +318,7 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
+-d:CROSS_PLATFORM_INPUT
 -d:CSHARP_7_OR_LATER
 -d:CSHARP_7_3_OR_NEWER
 -i:D:/UnityProject/Fractals/Library/PackageCache/com.unity.entities@0.0.12-preview.21/Unity.Rendering.Hybrid/LODGroupExtensions.cs
