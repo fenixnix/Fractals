@@ -40,7 +40,7 @@ public class DungeonBuilder : MonoBehaviour {
         var floorRoot = ObjBuilder.AddNode("Floor", roomRoot);
         for(int row = -room.size.y; row <= room.size.y; row++) {
             for(int col = -room.size.x; col <= room.size.x; col++) {
-                var floor = AddFloor(new Vector3Int(col, row, 0), floorRoot);
+                var floor = AddFloor(new Vector3(col, row, 0), floorRoot);
                 if((row%3 == 0)&&(col%2==0)) {
                     Instantiate(光源, floor.transform);
                 }
@@ -88,7 +88,7 @@ public class DungeonBuilder : MonoBehaviour {
         var floorRoot = ObjBuilder.AddNode("Floor", corridorRoot);
         for(int row = 0; row < length; row++) {
             for(int col = -width; col <= width; col++) {
-                AddFloor(new Vector3Int(col, row, 0), floorRoot);
+                AddFloor(new Vector3(col, row, 0), floorRoot);
             }
         }
         var wallRoot = ObjBuilder.AddNode("Wall", corridorRoot);
@@ -106,8 +106,8 @@ public class DungeonBuilder : MonoBehaviour {
         return pos;
     }
 
-    GameObject AddFloor(Vector3Int pos, Transform parent) {
-        return ObjBuilder.AddObject(floorPack.get(), pos, parent);
+    GameObject AddFloor(Vector3 pos, Transform parent) {
+        return ObjBuilder.AddObj(floorPack.get(), pos, parent);
     }
 
     
@@ -118,15 +118,15 @@ public class DungeonBuilder : MonoBehaviour {
     }
 
     public GameObject torch;
-    void AddWall2(GameObject obj, Transform parent, int length, int height = 2) {
+    public void AddWall2(GameObject obj, Transform parent, int length, int height = 2) {
         for(int h = 0; h < height; h++) {
-            ObjBuilder.AddObject(cornerWall, new Vector3Int(-1, 0, h), parent);
+            ObjBuilder.AddObj(cornerWall, new Vector3Int(-1, 0, h), parent);
             for(int i = 0; i < length; i++) {
                 if((h == 0) && (i == length / 2)) {
-                    ObjBuilder.AddObject(doorPrefab, new Vector3Int(i, 0, h), parent);
+                    ObjBuilder.AddObj(doorPrefab, new Vector3(i, 0, h), parent);
                 }
                 else {
-                    var wall = ObjBuilder.AddObject(obj, new Vector3Int(i, 0, h), parent);
+                    var wall = ObjBuilder.AddObj(obj, new Vector3(i, 0, h), parent);
                     if((h > 0)&&(i%2 == 1)) {
                         Instantiate(torch, wall.transform);
                     }

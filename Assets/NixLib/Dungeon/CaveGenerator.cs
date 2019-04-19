@@ -46,28 +46,28 @@ public class CaveGenerator : MonoBehaviour {
                     var pos = new Vector3(x, 0, y);
                     var floor = ObjBuilder.AddNode("floor", allfloor, pos);
                     //ObjBuilder.AddObject(floorPack.get(), new Vector3(floorOffset.x, 0, floorOffset.y), floor);
-                    var f = ObjBuilder.AddObject(floorPack.get(), Vector3.zero, floor);
+                    var f = ObjBuilder.AddObj(floorPack.get(), Vector3.zero, floor);
                     ObjBuilder.AdjFace2(f.transform, (ObjBuilder.FaceToward)Random.Range(0,4));
                     tmpGrid[x, y] = 1;
 
 
                     //ToDoAddWall;
                     if(grid.Is(new Vector2Int(x, y) + Vector2Int.up, 0)) {
-                        var wall = ObjBuilder.AddObject(caveWall, pos + new Vector3(0, 0, .5f), allWall.transform);
+                        var wall = ObjBuilder.AddObj(caveWall, pos + new Vector3(0, 0, .5f), allWall.transform);
                         wall.transform.Rotate(new Vector3(0, 180, 0));
                         tmpGrid[x, y] = 2;
                     }
                     if(grid.Is(new Vector2Int(x, y) + Vector2Int.down, 0)) {
-                        var wall = ObjBuilder.AddObject(caveWall, pos + new Vector3(0, 0, -.5f), allWall.transform);
+                        var wall = ObjBuilder.AddObj(caveWall, pos + new Vector3(0, 0, -.5f), allWall.transform);
                         tmpGrid[x, y] = 3;
                     }
                     if(grid.Is(new Vector2Int(x, y) + Vector2Int.left, 0)) {
-                        var wall = ObjBuilder.AddObject(caveWall, pos + new Vector3(-.5f, 0, 0), allWall.transform);
+                        var wall = ObjBuilder.AddObj(caveWall, pos + new Vector3(-.5f, 0, 0), allWall.transform);
                         wall.transform.Rotate(new Vector3(0, 90, 0));
                         tmpGrid[x, y] = 4;
                     }
                     if(grid.Is(new Vector2Int(x, y) + Vector2Int.right, 0)) {
-                        var wall = ObjBuilder.AddObject(caveWall, pos + new Vector3(.5f, 0, 0), allWall.transform);
+                        var wall = ObjBuilder.AddObj(caveWall, pos + new Vector3(.5f, 0, 0), allWall.transform);
                         wall.transform.Rotate(new Vector3(0, -90, 0));
                         tmpGrid[x, y] = 5;
                     }
@@ -78,7 +78,7 @@ public class CaveGenerator : MonoBehaviour {
                         && grid.Is(new Vector2Int(x, y) + Vector2Int.left, 255)
                         && grid.Is(new Vector2Int(x, y) + Vector2Int.right, 255)) {
                         var floor = ObjBuilder.AddNode("floor", allfloor, new Vector3(x, 0, y));
-                        ObjBuilder.AddObject(floorPack.get(), new Vector3(floorOffset.x, 0, floorOffset.y), floor);
+                        ObjBuilder.AddObj(floorPack.get(), new Vector3(floorOffset.x, 0, floorOffset.y), floor);
                         tmpGrid[x, y] = 6;
                     }
                 }
@@ -99,11 +99,11 @@ public class CaveGenerator : MonoBehaviour {
             for(int col = 0; col < tmpGrid.Width; col++) {
                 var pos = new Vector3(col, 0, raw);
                 if(tmpGrid[col,raw] == 6) {
-                    ObjBuilder.AddObject(centerCorner, pos, transform);
+                    ObjBuilder.AddObj(centerCorner, pos, transform);
                 }
                 if(tmpGrid[col, raw] == 1) {
                     if(Random.value < .6f) {
-                        var misc = ObjBuilder.AddObject(floorMisc.get(), pos, transform);
+                        var misc = ObjBuilder.AddObj(floorMisc.get(), pos, transform);
                         misc.transform.Translate(new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * tileSize / 2);
                     }
                 }
