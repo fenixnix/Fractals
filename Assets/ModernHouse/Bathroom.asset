@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619a7d27da0a1ee41b072237e0be01d0, type: 3}
+  m_Name: Bathroom
+  m_EditorClassIdentifier: 
+  mode: 2
+  objs:
+  - {fileID: 100000, guid: 8138cc99138f1354ab7a26dd89faa5f2, type: 3}
+  - {fileID: 100000, guid: f3697c7b3a00f8a4ba3861b84ddbc364, type: 3}
+  - {fileID: 100000, guid: 423adeeb76f459e4b883e3d689f12189, type: 3}
+  - {fileID: 100000, guid: 5b77a3d798feefc42a6120077fc111ba, type: 3}
+  - {fileID: 100000, guid: e1adc90784c23aa4fa9e06270c317779, type: 3}
+  - {fileID: 100000, guid: 58e0cafc526d63145939711938499f17, type: 3}
+  - {fileID: 100002, guid: a5e67d5abdd68d74c90b7fb58a5ffe2e, type: 3}
+  - {fileID: 100002, guid: 024ab17c2aa953243a98bee777e22bd5, type: 3}

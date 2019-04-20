@@ -15,13 +15,10 @@ public class ModernHouseStructure : MonoBehaviour
         var floor = ObjBuilder.AddNode("floorRoot", transform);
         int w = Random.Range(minSize, maxSize);
         int h = Random.Range(minSize, maxSize);
-        for(int y = 0; y < h; y++) {
-            for(int x = 0; x < w; x++) {
-                ObjBuilder.AddObj(floorPrefab, new Vector3(x, 0, y), floor);
-            }
-        }
+        ObjBuilder.AddPlane(floorPrefab, floor, w, h);
 
         var wall = ObjBuilder.AddNode("wallRoot", transform);
+
         var Nwall = ObjBuilder.AddNode("wall", wall);
         var gos = ObjBuilder.AddWall(wallPrefab, Nwall, w, 1);
 
@@ -29,6 +26,16 @@ public class ModernHouseStructure : MonoBehaviour
         Swall.Translate(new Vector3((w+1) * ObjBuilder.tileSize,0, h * ObjBuilder.tileSize));
         ObjBuilder.AdjFace(Swall, ObjBuilder.FaceToward.S);
         ObjBuilder.AddWall(wallPrefab, Swall, w, 1);
+
+        var Ewall = ObjBuilder.AddNode("wall", wall);
+        Ewall.Translate(new Vector3((w +1) * ObjBuilder.tileSize, 0, -ObjBuilder.tileSize));
+        ObjBuilder.AdjFace(Ewall, ObjBuilder.FaceToward.W);
+        ObjBuilder.AddWall(wallPrefab, Ewall, h, 1);
+
+        var Wwall = ObjBuilder.AddNode("wall", wall);
+        Wwall.Translate(ObjBuilder.tileSize, 0, (h) * ObjBuilder.tileSize);
+        ObjBuilder.AdjFace(Wwall, ObjBuilder.FaceToward.E);
+        ObjBuilder.AddWall(wallPrefab, Wwall, h, 1);
     }
     // Start is called before the first frame update
     void Start()

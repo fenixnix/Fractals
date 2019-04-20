@@ -5,6 +5,17 @@ namespace Nixlib {
     public class ObjBuilder : MonoBehaviour {
         public static float tileSize = 5;
 
+        static public List<GameObject> AddPlane(GameObject obj, Transform parent, int width = 5, int height = 5) {
+            List<GameObject> tmp = new List<GameObject>();
+            for(int h = 0; h < height; h++) {
+                for(int i = 0; i < width; i++) {
+                    var tile = AddObj(obj, new Vector3(i, 0, h), parent);
+                    tmp.Add(tile);
+                }
+            }
+            return tmp;
+        }
+
         static public List<GameObject> AddWall(GameObject obj, Transform parent, int length, int height = 2) {
             List<GameObject> tmp = new List<GameObject>();
             for(int h = 0; h < height; h++) {
