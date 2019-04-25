@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using HullDelaunayVoronoi.Delaunay;
 using Nixlib.WorldMap;
+using System.Linq;
 
-public class WorldGenerator : MonoBehaviour
-{
+public class WorldGenerator : MonoBehaviour {
     public int PointCount = 512;
     public Rect size;
     List<Vector3> points = new List<Vector3>();
@@ -18,7 +18,7 @@ public class WorldGenerator : MonoBehaviour
     public void Generate() {
         points.Clear();
         for(int i = 0; i < PointCount; i++) {
-            points.Add(new Vector2(Random.Range(size.xMin,size.xMax), Random.Range(size.yMin,size.yMax)));
+            points.Add(new Vector2(Random.Range(size.xMin, size.xMax), Random.Range(size.yMin, size.yMax)));
         }
         var render = GetComponent<GLRender>();
         render.points.Clear();
@@ -143,6 +143,7 @@ public class WorldGenerator : MonoBehaviour
     public float scale = 1;
     public float seaLevel = 0.3f;
     public Vector3 noisePosition = Vector3.one;
+
     [ContextMenu("Latitude")]
     public void GenerateLatitude() {
         Noise.NoiseAtom na = new Noise.NoiseAtom();
@@ -150,7 +151,7 @@ public class WorldGenerator : MonoBehaviour
         latitude.Clear();
         List<Vector3> pointsWithlatitude = new List<Vector3>();
         foreach(var p in points) {
-            var l = na.NoiseValue((p.x+noisePosition.x) / scale, (p.y+noisePosition.y) / scale);
+            var l = na.NoiseValue((p.x + noisePosition.x) / scale, (p.y + noisePosition.y) / scale);
             latitude.Add(l);
             pointsWithlatitude.Add(new Vector3(p.x, p.y, l));
         }
@@ -164,6 +165,8 @@ public class WorldGenerator : MonoBehaviour
             }
             render.pointColors.Add(color);
         }
+
+
     }
 
     public void FillSea() {
@@ -177,18 +180,34 @@ public class WorldGenerator : MonoBehaviour
         }
     }
 
+    public WorldMesh worldMesh;
     public PolygonWorld polyWorld = new PolygonWorld();
     [ContextMenu("Draw Poly World")]
     public void DrawPolyWorld() {
+        Noise.NoiseAtom na = new Noise.NoiseAtom();
+        na.Init(4, 0.5f, 2f);
         polyWorld.InitWorld(voronoi);
         var render = GetComponent<GLRender>();
-        render.points.Clear();
-        render.lines.Clear();
+        //render.points.Clear();
+        //render.lines.Clear();
+        //foreach(var r in polyWorld.regions) {
+        //    render.points.Add(r.position);
+        //}
+        //foreach(var e in polyWorld.edges) {
+        //    render.lines.Add(new Geometric.Line(e.A, e.B));
+        //}
+        worldMesh.Init();
         foreach(var r in polyWorld.regions) {
-            render.points.Add(r.position);
-        }
-        foreach(var e in polyWorld.edges) {
-            render.lines.Add(new Geometric.Line(e.A, e.B));
+            //var r = polyWorld.regions[0];
+            List<Vector3> p = new List<Vector3>();
+            var ll = na.NoiseValue((r.position.x + noisePosition.x) / scale, (r.position.y + noisePosition.y) / scale);
+            p.Add(new Vector3(r.position.x,r.position.y,ll));
+
+            foreach(var v in r.Vertexs) {
+                var l = na.NoiseValue((v.x + noisePosition.x) / scale, (v.y + noisePosition.y) / scale);
+                p.Add(new Vector3(v.x,v.y,l));
+            }
+            worldMesh.AddPolygon(p.ToArray());
         }
     }
 }

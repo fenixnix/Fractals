@@ -277,16 +277,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb14b4bda8a598a499f99fbadd8234d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointCount: 500
+  PointCount: 1000
   size:
     serializedVersion: 2
-    x: -1
-    y: -1
-    width: 2
-    height: 2
+    x: -2
+    y: -2
+    width: 4
+    height: 4
   scale: 1
   seaLevel: 0.3
   noisePosition: {x: 1, y: 1, z: 1}
+  worldMesh: {fileID: 2111676857}
 --- !u!114 &824378956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824378951}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af639ee3a4fcf8409187016590a4831, type: 3}
   m_Name: 
@@ -833,6 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1daeb59a057b02f479a16175c55f13b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawVertex: 0
 --- !u!4 &2111676858
 Transform:
   m_ObjectHideFlags: 0
