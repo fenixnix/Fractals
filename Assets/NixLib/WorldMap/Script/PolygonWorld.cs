@@ -14,19 +14,18 @@ namespace Nixlib.WorldMap {
         public List<PolygonRegionIndex> regionsIndex = new List<PolygonRegionIndex>();
 
         public List<PolygonEdge> edges = new List<PolygonEdge>();
-        public List<RegionPolygon> regions = new List<RegionPolygon>();
+        public List<PolygonRegion> regions = new List<PolygonRegion>();
         
-        public void InitWorld(VoronoiMesh2 voronoi) {
+        public void InitWorld(VoronoiMesh2 voronoi,NoiseAtom na) {
             regions.Clear();
             edgesIndex.Clear();
             regionsIndex.Clear();
             edges.Clear();
             vertexs.Clear();
-
+            this.na = na;
             foreach(var r in voronoi.Regions) {
                 AddRegion(r);
             }
-
             CalcVertex();
         }
 
@@ -44,14 +43,14 @@ namespace Nixlib.WorldMap {
 
         public void AddRegion(VoronoiRegion<Vertex2> region) {
             PolygonRegionIndex ri = new PolygonRegionIndex();
-
-
-            RegionPolygon r = new RegionPolygon();
+            PolygonRegion r = new PolygonRegion();
 
             //添加多边形顶点，计算多边形中心点
             Vector3 center = Vector3.zero;
             foreach(var c in region.Cells) {
-                var p = Contain(new Vector3(c.CircumCenter.X, c.CircumCenter.Y));
+                var z = na.NoiseValue(c.CircumCenter.X, c.CircumCenter.Y);
+                var tmpPoint = new Vector3(c.CircumCenter.X, c.CircumCenter.Y,z);
+                var p = Contain(tmpPoint);
                 center += p;
                 r.Vertexs.Add(p);
                 if(!vertexs.Contains(p)) {
