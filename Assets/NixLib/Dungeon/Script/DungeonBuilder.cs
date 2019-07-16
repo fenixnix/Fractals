@@ -13,7 +13,7 @@ public class DungeonBuilder : MonoBehaviour {
     public GameObject wallPrefab;
     public GameObject doorPrefab;
 
-    public GameObjectPack wallGroundPrefab;
+    //public GameObjectPack wallGroundPrefab;
 
     public int width = 50;
     public int height = 50;
@@ -25,14 +25,14 @@ public class DungeonBuilder : MonoBehaviour {
             door = new Vector3Int(2, 0, 0)
         };
         AddRoom(room);
-        AddCorridor(new Vector3Int(3, 8, 0), 2, 10);
+        AddCorridor(new Vector3Int(0, -4, 0), 0, 10);
     }
 
     public GameObject 光源;
 
-    public GameObject 墙角死人;
-    public GameObject 墙上死人;
-    public GameObject 地上死人;
+    //public GameObject 墙角死人;
+    //public GameObject 墙上死人;
+    //public GameObject 地上死人;
 
     public void AddRoom(DungeonRoom room) {
         var roomRoot = ObjBuilder.AddNode("Room", dungeonRoot, room.position);
@@ -40,15 +40,16 @@ public class DungeonBuilder : MonoBehaviour {
         var floorRoot = ObjBuilder.AddNode("Floor", roomRoot);
         for(int row = -room.size.y; row <= room.size.y; row++) {
             for(int col = -room.size.x; col <= room.size.x; col++) {
-                var floor = AddFloor(new Vector3(col, row, 0), floorRoot);
+                var floor = AddFloor(new Vector3(col, 0, row), floorRoot);
                 if((row%3 == 0)&&(col%2==0)) {
-                    Instantiate(光源, floor.transform);
+                    var light = Instantiate(光源, floor.transform);
+                    light.transform.Translate(new Vector3(-tileSize / 2, 0, tileSize / 2));
                 }
                 else {
                     if(Random.value < 0.3f) {
-                        var dead = Instantiate(地上死人, floor.transform);
-                        dead.transform.Translate(new Vector3(-tileSize / 2, 0.1f, tileSize/ 2));
-                        dead.transform.Rotate(new Vector3(0, Random.Range(-180, 180), 0));
+                        //var dead = Instantiate(地上死人, floor.transform);
+                        //dead.transform.Translate(new Vector3(-tileSize / 2, 0.1f, tileSize/ 2));
+                        //dead.transform.Rotate(new Vector3(0, Random.Range(-180, 180), 0));
                     }
                 }
             }
@@ -60,11 +61,12 @@ public class DungeonBuilder : MonoBehaviour {
         nRoot.Translate(new Vector3(-room.size.x * tileSize, 0, -room.size.y * tileSize));
         var sRoot = ObjBuilder.AddNode("S", wallRoot);
         sRoot.Translate(new Vector3(room.size.x * tileSize, 0, (room.size.y + 1) * tileSize));
-        AdjFace(sRoot, FaceToward.N);
-
+        AdjFace(sRoot, FaceToward.S);
         var eRoot = ObjBuilder.AddNode("E", wallRoot);
         eRoot.Translate(new Vector3(-room.size.x * tileSize, 0, room.size.y * tileSize));
         AdjFace(eRoot, FaceToward.E);
+
+
         var wRoot = ObjBuilder.AddNode("W", wallRoot);
         wRoot.Translate(new Vector3((room.size.x + 1) * tileSize, 0, -room.size.y * tileSize));
         AdjFace(wRoot, FaceToward.W);
@@ -72,12 +74,12 @@ public class DungeonBuilder : MonoBehaviour {
         AddWall2(wallPrefab, sRoot, room.size.x * 2 + 1, room.size.z);
         AddWall2(wallPrefab, eRoot, room.size.y * 2 + 1, room.size.z);
         AddWall2(wallPrefab, wRoot, room.size.y * 2 + 1, room.size.z);
-        
+
         var miscRoot = ObjBuilder.AddNode("Misc", roomRoot);
         for(int row = 1; row < room.size.y - 1; row++) {
             for(int col = 1; col < room.size.x - 1; col++) {
                 if(Random.value < 0.1f) {
-                    AddMisc(wallGroundPrefab.get(), new Vector3Int(col, row, 0), floorRoot);
+                    //AddMisc(wallGroundPrefab.get(), new Vector3Int(col, row, 0), floorRoot);
                 }
             }
         }
@@ -88,13 +90,13 @@ public class DungeonBuilder : MonoBehaviour {
         var floorRoot = ObjBuilder.AddNode("Floor", corridorRoot);
         for(int row = 0; row < length; row++) {
             for(int col = -width; col <= width; col++) {
-                AddFloor(new Vector3(col, row, 0), floorRoot);
+                AddFloor(new Vector3(col, 0, row), floorRoot);
             }
         }
         var wallRoot = ObjBuilder.AddNode("Wall", corridorRoot);
         for(int i = 0; i < length; i++) {
-            AddWall(wallPrefab, new Vector3Int(-width, i, 0), wallRoot, FaceToward.E);
-            AddWall(wallPrefab, new Vector3Int(width + 1, i, 0), wallRoot, FaceToward.W);
+            AddWall(wallPrefab, new Vector3Int(-width, 0, i), wallRoot, FaceToward.E);
+            AddWall(wallPrefab, new Vector3Int(width + 1, 0, i), wallRoot, FaceToward.W);
         }
         ObjBuilder.AdjFace(corridorRoot, face);
         switch(face) {
@@ -113,29 +115,30 @@ public class DungeonBuilder : MonoBehaviour {
     
     void AddWall(GameObject gObj, Vector3Int pos, Transform parent, FaceToward face = FaceToward.S) {
         var go = Instantiate(gObj, parent);
-        go.transform.localPosition = new Vector3(pos.x * tileSize, pos.z * tileSize, pos.y * tileSize);
+        go.transform.localPosition = new Vector3(pos.x * tileSize, pos.y * tileSize, pos.z * tileSize);
         AdjFace(go.transform, face);
     }
 
-    public GameObject torch;
+    //public GameObject torch;
     public void AddWall2(GameObject obj, Transform parent, int length, int height = 2) {
         for(int h = 0; h < height; h++) {
-            ObjBuilder.AddObj(cornerWall, new Vector3Int(-1, 0, h), parent);
+            ObjBuilder.AddObj(cornerWall, new Vector3Int(-1, h, 0), parent);
             for(int i = 0; i < length; i++) {
                 if((h == 0) && (i == length / 2)) {
-                    ObjBuilder.AddObj(doorPrefab, new Vector3(i, 0, h), parent);
+                    var door = ObjBuilder.AddObj(doorPrefab, new Vector3(i, h, 0), parent);
+                    door.transform.Translate(new Vector3(-tileSize / 2, 0, 0));
                 }
                 else {
-                    var wall = ObjBuilder.AddObj(obj, new Vector3(i, 0, h), parent);
+                    var wall = ObjBuilder.AddObj(obj, new Vector3(i, h, 0), parent);
                     if((h > 0)&&(i%2 == 1)) {
-                        Instantiate(torch, wall.transform);
+                        //Instantiate(torch, wall.transform);
                     }
                     if(Random.value < 0.3f) {
                         if(h == 0) {
-                            Instantiate(墙角死人, wall.transform).transform.Translate(2.5f, 0.1f, 0.5f); ;
+                            //Instantiate(墙角死人, wall.transform).transform.Translate(2.5f, 0.1f, 0.5f); ;
                         }
                         else {
-                            Instantiate(墙上死人, wall.transform).transform.Translate(2.5f, 1.5f, 0.5f);
+                            //Instantiate(墙上死人, wall.transform).transform.Translate(2.5f, 1.5f, 0.5f);
                         }
                     }
                 }

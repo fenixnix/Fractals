@@ -41,9 +41,9 @@ namespace Nixlib {
             return go;
         }
 
-        static public GameObject AddObj(GameObject obj, Vector3Int pos, Transform parent) {
-            return AddObj(obj, pos, parent);
-        }
+        //static public GameObject AddObj(GameObject obj, Vector3Int pos, Transform parent) {
+        //    return AddObj(obj, pos, parent);
+        //}
 
         public enum FaceToward { S, N, E, W };
         static public void AdjFace(Transform tran, FaceToward face = FaceToward.N) {
